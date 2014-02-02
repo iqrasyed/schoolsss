@@ -15,7 +15,7 @@
         <tr>
             <td colspan="4" style="text-align: center">
                 <strong><span style="font-size: 16pt; color: red; font-family: Verdana">Patient
-                    Addition</span></strong></td>
+                    Registration</span></strong></td>
         </tr>
         <tr>
             <td colspan="4" align="center">
@@ -32,7 +32,7 @@
             <td style="height: 5px; font-weight: bolder; font-size: 8pt; width: 184px; font-family: verdana;">
                 Patient Code:</td>
             <td style="height: 5px; width: 184px; font-weight: bolder; font-size: 8pt; font-family: verdana;">
-                <asp:TextBox ID="txtCode1" runat="server" Width="26px">PTN</asp:TextBox><asp:TextBox ID="txtCode2" runat="server" Width="115px"></asp:TextBox>
+                <asp:TextBox ID="txtCode1" runat="server" Width="26px">PK</asp:TextBox><asp:TextBox ID="txtCode2" runat="server" Width="115px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCode2"
                     ErrorMessage="*"></asp:RequiredFieldValidator></td>
             <td style="height: 5px; width: 184px; font-weight: bolder; font-size: 8pt; font-family: verdana;">
