@@ -3,8 +3,7 @@
     TagPrefix="uc4" %>
 <%@ Register Src="EmployeeUserControl/LeftPanelWebUserControl.ascx" TagName="LeftPanelWebUserControl"
     TagPrefix="uc2" %>
-<%@ Register Src="EmployeeUserControl/RighPaneUserControl.ascx" TagName="RighPaneUserControl"
-    TagPrefix="uc3" %>
+
 <%@ Register Src="EmployeeUserControl/EmployeeHeaderUserControl.ascx" TagName="EmployeeHeaderUserControl"
     TagPrefix="uc1" %>
 

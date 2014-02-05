@@ -23,13 +23,7 @@
                         <o:p>&nbsp;</o:p>
                     </span>
                 </p>
-                <p class="MsoNormal" style="margin: 0in 0in 0pt 0.25in; text-indent: 0.5in">
-                    <span style="font-size: 10pt; font-family: 'Verdana','sans-serif'"><span style="color: #000000">
-                        The idea is to develop web based patient management software that can be used to
-                        keep track of the patients registering in a hospital or clinic. Doctors and the
-                        rooms available in a hospital can be managed using this system. Also, this system
-                        should support accessing the previous visit histories of any patient, search for
-                        patients by name etc.<o:p></o:p></span></span></p>
+                
                 <p class="MsoNormal" style="margin: 0in 0in 0pt">
                     <span lang="EN" style="font-size: 10pt; color: black; font-family: 'Verdana','sans-serif';
                         mso-ansi-language: EN">
@@ -109,17 +103,7 @@
                         <o:p>&nbsp;</o:p>
                     </span>
                 </p>
-                <p class="MsoNormal" style="margin: 0in 0in 0pt 0.5in">
-                    <b style="mso-bidi-font-weight: normal"><span style="font-size: 10pt; color: #000000;
-                        font-family: 'Verdana','sans-serif'">Doctor</span></b><span style="font-size: 10pt;
-                            font-family: 'Verdana','sans-serif'"><span style="color: #000000">: Doctor can access
-                                a patient’s record and update his observations about the patient in that particular
-                                visit.<o:p></o:p></span></span></p>
-                <p class="MsoNormal" style="margin: 0in 0in 0pt 0.5in; text-indent: 0.5in">
-                    <span style="font-size: 10pt; color: #000000; font-family: 'Verdana','sans-serif'">
-                        <o:p>&nbsp;</o:p>
-                    </span>
-                </p>
+                
                 <p class="MsoNormal" style="margin: 0in 0in 0pt 0.5in">
                     <b style="mso-bidi-font-weight: normal"><span style="font-size: 10pt; color: #000000;
                         font-family: 'Verdana','sans-serif'">Reports: </span></b><span style="font-size: 10pt;

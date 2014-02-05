@@ -30,8 +30,7 @@
                       <asp:MenuItem Text="Doctor" Value="Doctor">
                             <asp:MenuItem NavigateUrl="~/Employee/Search/frmAllDoctor.aspx" Text="All Doctor"
                                 Value="All Doctor"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/Employee/Search/frmDoctoronDiseases.aspx" Text="Doctor On Disease"
-                                Value="Doctor On Disease"></asp:MenuItem>
+                           
                         </asp:MenuItem>
                         <asp:MenuItem Text="Medicine" Value="Medicine">
                             <asp:MenuItem NavigateUrl="~/Employee/Search/frmAllMedicine.aspx" Text="All Medicine"
@@ -72,11 +71,7 @@
                                 Value="In Room"></asp:MenuItem>
                      </asp:MenuItem>
                     </asp:MenuItem>
-                    <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
-                    <asp:MenuItem Text="Delete" Value="Delete">
-                     <asp:MenuItem NavigateUrl="~/Employee/frmAllDeletion.aspx" Text="Patient Info" Value="Patient Info">
-                        </asp:MenuItem>
-                    </asp:MenuItem>
+                    
                     <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
                     <asp:MenuItem Text="Discharge" Value="Discharge">
                     <asp:MenuItem NavigateUrl="~/Employee/frmDischarge.aspx" Text="Patient" Value="Patient Info">
