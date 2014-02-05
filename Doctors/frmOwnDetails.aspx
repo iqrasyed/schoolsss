@@ -17,7 +17,7 @@
         <tr>
             <td align="center" colspan="1">
                 <asp:Button ID="btnDetail" runat="server" Font-Bold="True" Font-Names="Verdana" Font-Size="X-Small"
-                    OnClick="btnDetail_Click" Text="Detail" Width="76px" /></td>
+                    OnClick="btnDetail_Click" Text="Detail" Width="76px" Visible="False" /></td>
         </tr>
         <tr>
             <td colspan="1" style="width: 540px; height: 27px; text-align: center">
@@ -94,7 +94,7 @@
                         </tr>
                         <tr style="color: #000000">
                             <td align="left" colspan="2" style="text-align: right">
-                                <asp:Button ID="btnModify" runat="server" Font-Bold="True" Font-Names="Verdana" Font-Size="X-Small"
+                                <asp:Button ID="btnModify" Visible="false" runat="server" Font-Bold="True" Font-Names="Verdana" Font-Size="X-Small"
                                     OnClick="btnModify_Click" Text="Modify" Width="82px" />
                             </td>
                         </tr>

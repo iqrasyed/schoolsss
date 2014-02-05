@@ -3,18 +3,17 @@
     <table align="center" style="color: #ff3300">
         <tr>
             <td colspan="2" style="font-size: 16pt; color: red; font-family: Verdana;" align="center">
-                Employee Addition</td>
+                Staff Addition</td>
         </tr>
         <tr>
             <td align="center" colspan="2" style="height: 21px">
                 <asp:Label ID="lblMsg" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#0000C0"
                     Width="353px"></asp:Label><br />
-                <span style="color: #ff3300"><strong><span style="color: #ff3300">Please Enter</span> The *
-                    Value</strong></span></td>
+                <span style="color: #ff3300"><strong><span style="color: #ff3300">*</span> Required Fields</strong></span></td>
         </tr>
         <tr style="color: #000000">
             <td>
-                <span style="color: #ff3300">Employ</span>ee Name<span style="color: #ff3300">*</span>:</td>
+                <span style="color: #ff3300">Staff</span> Name<span style="color: #ff3300">*</span>:</td>
             <td style="width: 240px">
                 <asp:TextBox ID="txtName" runat="server" Width="174px"></asp:TextBox><asp:RequiredFieldValidator
                     ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtName" ErrorMessage="*"></asp:RequiredFieldValidator></td>
