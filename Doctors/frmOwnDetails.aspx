@@ -94,7 +94,7 @@
                         </tr>
                         <tr style="color: #000000">
                             <td align="left" colspan="2" style="text-align: right">
-                                <asp:Button ID="btnModify" Visible="false" runat="server" Font-Bold="True" Font-Names="Verdana" Font-Size="X-Small"
+                                <asp:Button ID="btnModify" runat="server" Font-Bold="True" Font-Names="Verdana" Font-Size="X-Small"
                                     OnClick="btnModify_Click" Text="Modify" Width="82px" />
                             </td>
                         </tr>
