@@ -12,18 +12,18 @@
                 <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                 <Items>
                     <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
-                    <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
-                    <asp:MenuItem Text="Admin" Value="Admin" NavigateUrl="~/Admin/Default.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
-                    <asp:MenuItem Text="Doctor" Value="Doctor" NavigateUrl="~/Doctors/frmLogin.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="~/Employee/frmLogin.aspx" Text="Employee" Value="Employee"></asp:MenuItem>                                        
+                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>                                                    
                     <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
                     <asp:MenuItem NavigateUrl="~/frmAboutUs.aspx" Text="About Us" Value="About Us"></asp:MenuItem>
                     <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
                     <asp:MenuItem NavigateUrl="~/frmContactUs.aspx" Text="Contact Us" Value="Contact Us">
                     </asp:MenuItem>
+                    <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                    <asp:MenuItem Text="Login" Value="Login">                        
+                        <asp:MenuItem Text="Admin" Value="Admin" NavigateUrl="~/Admin/Default.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Doctor" Value="Doctor" NavigateUrl="~/Doctors/frmLogin.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Employee/frmLogin.aspx" Text="Employee" Value="Employee"></asp:MenuItem>                       
+                    </asp:MenuItem> 
                     <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
                 </Items>
                 <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
