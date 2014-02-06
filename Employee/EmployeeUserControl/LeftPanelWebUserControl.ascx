@@ -27,10 +27,7 @@
                     </asp:MenuItem>
                     <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
                     <asp:MenuItem Text="Search" Value="Search">
-                      <asp:MenuItem Text="Doctor" Value="Doctor">
-                            <asp:MenuItem NavigateUrl="~/Employee/Search/frmAllDoctor.aspx" Text="All Doctor"
-                                Value="All Doctor"></asp:MenuItem>
-                           
+                      <asp:MenuItem Text="Doctors" Value="Doctors" NavigateUrl="~/Employee/Search/frmAllDoctor.aspx" >
                         </asp:MenuItem>
                         <asp:MenuItem Text="Medicine" Value="Medicine">
                             <asp:MenuItem NavigateUrl="~/Employee/Search/frmAllMedicine.aspx" Text="All Medicine"
