@@ -12,12 +12,17 @@ using System.Web.UI.HtmlControls;
 public partial class frmLogin : System.Web.UI.Page
 {
     LoginInfoBL login = new LoginInfoBL();
+    
     protected void Page_Load(object sender, EventArgs e)
     {
+        txtName.Attributes.Add("class", "input-block-level");
+        txtPassword.Attributes.Add("class", "input-block-level");
+        btnSubmit.Attributes.Add("class", "btn btn-large btn-primary btn-block");
+        Button1.Attributes.Add("class", "btn btn-large btn-primary btn-block");
         if (!IsPostBack)
         {
-            Image1.Visible = false;
-            lblMsg.Visible = false;
+           // Image1.Visible = false;
+           // lblMsg.Visible = false;
         }
     }
     protected void btnSubmit_Click(object sender, EventArgs e)
@@ -34,9 +39,9 @@ public partial class frmLogin : System.Web.UI.Page
         }
         else
         {
-            Image1.Visible = true;
-            lblMsg.Visible = true;
-            lblMsg.Text = "Invalid Username or Password...!";
+          //  Image1.Visible = true;
+          //  lblMsg.Visible = true;
+          //  lblMsg.Text = "Invalid Username or Password...!";
             txtName.Focus();
         }
 
