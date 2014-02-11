@@ -1,4 +1,4 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SimpleMasterPage.master.cs" Inherits="Employee_SimpleMasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SimpleMasterPage.master.cs" Inherits="Employee_SimpleMasterPage" %>
 
 <html>
 <head runat="server">

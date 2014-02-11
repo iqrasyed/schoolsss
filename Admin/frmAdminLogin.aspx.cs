@@ -14,31 +14,20 @@ public partial class Admin_frmAdminLogin : System.Web.UI.Page
     LoginInfoBL login = new LoginInfoBL();
     protected void Page_Load(object sender, EventArgs e)
     {
+        txtName.Attributes.Add("class", "input-block-level");
+        txtPassword.Attributes.Add("class", "input-block-level");
+        btnSubmit.Attributes.Add("class", "btn btn-large btn-primary btn-block");
+        Button1.Attributes.Add("class", "btn btn-large btn-primary btn-block");
         if (!IsPostBack)
         {
-            Image1.Visible = false;
+          //  Image1.Visible = false;
             lblMsg.Visible = false;
         }
     }
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
         if (txtName.Text.Length > 0 && txtPassword.Text.Length > 0)
-        {
-            //SqlConnection cn=new SqlConnection (ConfigurationSettings .AppSettings ["Connstr"]);
-            //cn.Open ();
-            //string str="select *from tbl_AdminLogin where AdminLoginId='"+txtName .Text +"' and password='"+txtPassword .Text +"'";
-            //SqlCommand cmd=new SqlCommand (str,cn );
-            //object x =null ;
-            //x=cmd.ExecuteScalar ();
-            //if (x == null)
-            //{
-            // 
-            //}
-            //else
-            //{
-            //    
-            //}
-            //cn.Close ();
+        {           
             login.Name = txtName.Text.Trim();
             login.Password = txtPassword.Text.Trim();
             if (login.CheckAdmininfo() == true)
@@ -48,7 +37,8 @@ public partial class Admin_frmAdminLogin : System.Web.UI.Page
             }
             else
             {
-                Image1.Visible = true;
+               // Image1.Visible = true;
+                lblMsg.Attributes.Add("class", "muted text-center");
                 lblMsg.Visible = true;
                 lblMsg.Text = "Invalid Username or Password...!";
                 txtName.Focus();

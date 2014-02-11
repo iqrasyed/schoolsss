@@ -6,8 +6,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:ScriptManager id="ScriptManager1" runat="server">
     </asp:ScriptManager>
-      <table align="center" style="width: 757px">
-          <tr>
+      <table align="center" style="width: 770px">
+        <tr>
               <td colspan="4" style="text-align: center">
                   &nbsp;&nbsp;
               </td>
@@ -23,7 +23,7 @@
                     Width="358px"></asp:Label><br />
                 <span style="color: #ff3300; font-size: 8pt; font-family: Verdana;"><strong>Please Enter The * Value</strong></span></td>
         </tr>
-          <tr>
+        <tr>
               <td align="center" colspan="4">
                   &nbsp;&nbsp;
               </td>

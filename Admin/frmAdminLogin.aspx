@@ -1,46 +1,83 @@
-<%@ Page Language="C#" MasterPageFile="~/Admin/MasterPage.master" AutoEventWireup="true" CodeFile="frmAdminLogin.aspx.cs" Inherits="Admin_frmAdminLogin" Title="Untitled Page" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div style="text-align:center">
-    <div style="border:1px; margin-top:130px; border-color:Red; border-style:solid; width:260px; height:150px">
-    <table border="0" cellpadding="0" cellspacing="0" align="center" style="width: 309px">
-        <tr style="background-color:red">
-            <td align="center" colspan="2">
-                <strong><span style="font-size: 16pt; color: white">LOGIN</span></strong></td>
-        </tr>
-        <tr>
-            <td align="center" colspan="2">
-                &nbsp;&nbsp;
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 100px">
-                <span style="font-size: 8pt; font-family: Verdana"><strong>
-                User Name:</strong></span></td>
-            <td style="width: 100px">
-                <asp:TextBox ID="txtName" runat="server"></asp:TextBox></td>
-        </tr>
-        <tr>
-            <td style="width: 100px; height: 19px">
-                <span style="font-size: 8pt; font-family: Verdana"><strong>
-                Password:</strong></span></td>
-            <td style="width: 100px; height: 19px">
-                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Width="148px"></asp:TextBox></td>
-        </tr>
-        <tr>
-            <td align="center" colspan="2" valign="top">
-                &nbsp;<asp:Image ID="Image1" runat="server" ImageUrl="~/Images/alertIconWin.gif" Height="17px" />
-                <asp:Label ID="lblMsg" runat="server" Font-Bold="True" Font-Size="Small" ForeColor="Red"
-                    Width="249px"></asp:Label></td>
-        </tr>
-        <tr>
-            <td align="center" colspan="2">
-                <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" 
-                    Text="Submit" Font-Bold="True" Font-Names="Verdana" Font-Size="X-Small" 
-                    style="height: 20px" />
-                <asp:Button ID="Button1" runat="server" Font-Bold="True" Font-Names="Verdana" Font-Size="X-Small"
-                    OnClick="Button1_Click" Text="Back" /></td>
-        </tr>
-    </table>
-    </div> 
-</asp:Content>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="frmAdminLogin.aspx.cs" Inherits="Admin_frmAdminLogin" Title="Untitled Page" %>
+<html>
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/magic/magic.css">
+</head>
+<body style="">
+    <div class="container">
+        <div class="text-center">
+            <img src="../assets/img/logo.png" alt="Metis Logo">
+        </div>
+        <div class="tab-content">
+            <div id="login" class="tab-pane active">
+                <form id="form1" runat="server" class="form-signin">
+                    <p class="muted text-center">
+                            Enter your username and password
+                        </p>
+                        <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+                        <asp:Label ID="lblMsg" runat="server"></asp:Label>
+                        <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" />
+                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Back" />
+                </form>
+            </div>
+            <%--<div id="forgot" class="tab-pane">
+                    <form action="index.html" class="form-signin">
+                        <p class="muted text-center">
+                            Enter your valid e-mail
+                        </p>
+                        <input type="email" placeholder="mail@domain.com" required="required" class="input-block-level">
+                        <br>
+                        <br>
+                        <button class="btn btn-large btn-danger btn-block" type="submit">Recover Password</button>
+                    </form>
+                </div>
+                <div id="signup" class="tab-pane">
+                    <form action="index.html" class="form-signin">
+                        <input type="text" placeholder="username" class="input-block-level">
+                        <input type="email" placeholder="mail@domain.com" class="input-block-level">
+                        <input type="password" placeholder="password" class="input-block-level">
+                        <button class="btn btn-large btn-success btn-block" type="submit">Register</button>
+
+                    </form>
+                </div>--%>
+        </div>
+        <div class="text-center">
+            <ul class="inline">
+                <li><a class="muted" href="#login" data-toggle="tab">Login</a></li>
+                <li><a class="muted" href="#forgot" data-toggle="tab">Forgot Password</a></li>
+                <li><a class="muted" href="#signup" data-toggle="tab">Signup</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+    <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="assets/js/vendor/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../assets/js/vendor/bootstrap.min.js"></script>
+
+    <script>
+        $('.inline li > a').click(function () {
+            var activeForm = $(this).attr('href') + ' > form';
+            //console.log(activeForm);
+            $(activeForm).addClass('magictime swap');
+            //set timer to 1 seconds, after that, unload the magic animation
+            setTimeout(function () {
+                $(activeForm).removeClass('magictime swap');
+            }, 1000);
+        });
+
+    </script>
+
+
+</body>
+</html>
+
 

@@ -71,8 +71,8 @@
             <td align="left" colspan="1" style="font-weight: bolder; font-size: 8pt; font-family: verdana">
                 Time:</td>
             <td align="left" colspan="2">
-                <asp:TextBox ID="txtTime" runat="server" Width="90px"></asp:TextBox><asp:DropDownList
-                    ID="ddlTime" runat="server" Width="47px">
+                <asp:TextBox ID="txtTime" runat="server" Width="70px"></asp:TextBox><asp:DropDownList
+                    ID="ddlTime" runat="server" Width="70px">
                     <asp:ListItem>AM</asp:ListItem>
                     <asp:ListItem>PM</asp:ListItem>
                 </asp:DropDownList><cc2:MaskedEditExtender ID="MaskedEditExtender1" runat="server"
@@ -87,7 +87,7 @@
         </tr>
         <tr>
             <td colspan="3" style="text-align: center">
-                <asp:Button ID="btnAdd" runat="server" Text="Add" Width="84px" OnClick="btnAdd_Click" Font-Bold="True" Font-Names="Verdana" Font-Size="X-Small" /></td>
+                <asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="btnAdd_Click" CssClass="btn btn-primary"/></td>
         </tr>
     </table>
 </asp:Content>

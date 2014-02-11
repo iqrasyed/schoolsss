@@ -11,7 +11,7 @@
     <!-- .nav -->
     <ul class="nav">
         <li>
-            <a href="Default.aspx">Dashboard</a>
+            <a href="../frmEmployeeHome.aspx" runat="server">Dashboard</a>
 
         </li>
         <%--<li><a href="table.html">Tables</a></li>

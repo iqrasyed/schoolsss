@@ -1,18 +1,18 @@
 <%@ Page Language="C#" MasterPageFile="~/Employee/MasterPage.master" AutoEventWireup="true" CodeFile="frmAddMedicineOnPatient.aspx.cs" Inherits="Employee_frmAddMedicineOnPatient" Title="Untitled Page" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <table align="center" style="width: 262px">
+    <table align="center" >
         <tr>
-            <td colspan="4" style="text-align: center">
+            <td colspan="15" style="text-align: center">
                 &nbsp;&nbsp;
             </td>
         </tr>
         <tr>
-            <td colspan="4" style="text-align: center">
+            <td colspan="15" style="text-align: center">
                 <strong><span style="font-size: 16pt; color: red; font-family: Verdana">Medicine
                     Addition</span></strong></td>
         </tr>
         <tr>
-            <td colspan="4" style="text-align: center">
+            <td colspan="15" style="text-align: center">
                 &nbsp;&nbsp;
             </td>
         </tr>
@@ -69,7 +69,7 @@
         </tr>
         <tr>
             <td colspan="4" style="text-align: center">
-                <asp:Button ID="Button1" runat="server" Text="Add" Font-Bold="True" Font-Names="Verdana" Font-Size="X-Small" />
+                <asp:Button ID="Button1" runat="server" Text="Add" CssClass="btn btn-primary" />
             </td>
         </tr>
     </table>

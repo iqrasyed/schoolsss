@@ -60,7 +60,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </a>
-                            <a class="brand" href="index.html">Hospital Management System</a>
+                            <a class="brand" href="../Default.aspx" runat="server">Hospital Management System</a>
                             <!-- .topnav -->
                             <div class="btn-toolbar topnav">
                                 <div class="btn-group">
@@ -69,7 +69,7 @@
                                         <i class="icon-resize-horizontal"></i>
                                     </a>
                                 </div>
-                                <div class="btn-group">
+                               <%-- <div class="btn-group">
                                     <a class="btn btn-inverse" rel="tooltip" data-original-title="E-mail" data-placement="bottom">
                                         <i class="icon-envelope"></i>
                                         <span class="label label-warning">5</span>
@@ -89,10 +89,10 @@
                                         data-original-title="Help" data-toggle="modal">
                                         <i class="icon-question-sign"></i>
                                     </a>
-                                </div>
+                                </div>--%>
                                 <div class="btn-group">
                                     <a class="btn btn-inverse" data-placement="bottom" data-original-title="Logout" rel="tooltip"
-                                        href="frmEmpLogout.aspx"><i class="icon-off"></i></a>
+                                        href="~/Employee/frmEmpLogout.aspx" runat="server"><i class="icon-off"></i></a>
                                 </div>
                             </div>
 

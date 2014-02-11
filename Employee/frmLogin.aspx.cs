@@ -22,7 +22,7 @@ public partial class frmLogin : System.Web.UI.Page
         if (!IsPostBack)
         {
            // Image1.Visible = false;
-           // lblMsg.Visible = false;
+            lblMsg.Visible = false;
         }
     }
     protected void btnSubmit_Click(object sender, EventArgs e)
@@ -40,8 +40,9 @@ public partial class frmLogin : System.Web.UI.Page
         else
         {
           //  Image1.Visible = true;
-          //  lblMsg.Visible = true;
-          //  lblMsg.Text = "Invalid Username or Password...!";
+            lblMsg.Attributes.Add("class", "muted text-center");
+            lblMsg.Visible = true;
+            lblMsg.Text = "Invalid Username or Password...!";
             txtName.Focus();
         }
 

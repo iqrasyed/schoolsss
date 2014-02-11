@@ -14,9 +14,13 @@ public partial class frmLogin : System.Web.UI.Page
     LoginInfoBL login = new LoginInfoBL();
     protected void Page_Load(object sender, EventArgs e)
     {
+
+        txtName.Attributes.Add("class", "input-block-level");
+        txtPassword.Attributes.Add("class", "input-block-level");
+        btnSubmit.Attributes.Add("class", "btn btn-large btn-primary btn-block");
         if (!IsPostBack)
         {
-            Image1.Visible = false;
+            //Image1.Visible = false;
             lblMsg.Visible = false;
         }
     }
@@ -33,7 +37,7 @@ public partial class frmLogin : System.Web.UI.Page
             }
             else
             {
-                Image1.Visible = true;
+               // Image1.Visible = true;
                 lblMsg.Visible = true;
                 lblMsg.Text = "Invalid Username or Password...!";
                 txtName.Focus();
@@ -41,7 +45,7 @@ public partial class frmLogin : System.Web.UI.Page
         }
         else
         {
-            Image1.Visible = true;
+           // Image1.Visible = true;
             lblMsg.Visible = true;
             lblMsg.Text = "Invalid Username or Password...!";
             txtName.Focus();

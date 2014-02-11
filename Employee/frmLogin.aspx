@@ -44,8 +44,10 @@
                         </p>
                         <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
                         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+                        <asp:Label ID="lblMsg" runat="server"></asp:Label>
                         <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" />
                         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Back" />
+    
                         <%--<input type="text" placeholder="Username" class="input-block-level">
                         <input type="password" placeholder="Password" class="input-block-level">
                         <button class="btn btn-large btn-primary btn-block" type="submit">Sign in</button>--%>
