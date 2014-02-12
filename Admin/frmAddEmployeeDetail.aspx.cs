@@ -31,7 +31,7 @@ public partial class Admin_frmAddEmployeeDetail : System.Web.UI.Page
             emp.Dutytime = ddlDutyTime.SelectedItem.Text;
             emp.Uname = txtUname.Text.Trim();
             emp.Password = txtPassword.Text.Trim();
-           // emp.Roleid = 2;
+            emp.Roleid = 2;
             emp.InsertEmployeeDetail();
             lblMsg.Text = "Employee Added...!";
             txtName.Text = "";

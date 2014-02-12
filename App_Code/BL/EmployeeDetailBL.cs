@@ -71,7 +71,7 @@ public class EmployeeDetailBL:Connection
 }   
     public void InsertEmployeeDetail()
     {
-        SqlParameter[] p = new SqlParameter[8];
+        SqlParameter[] p = new SqlParameter[9];
         p[0] = new SqlParameter("@name", this.name);
         p[0].DbType = DbType.String;
         p[1] = new SqlParameter("@address", this.address);
@@ -86,10 +86,10 @@ public class EmployeeDetailBL:Connection
         p[5].DbType = DbType.String;
         p[6] = new SqlParameter("@password", this.password);
         p[6].DbType = DbType.String;
-       // p[7] = new SqlParameter("@roleid", this.roleid);
-       // p[7].DbType = DbType.Int16;
-        p[7] = new SqlParameter("@EmpId", this.empid);
-        p[7].DbType = DbType.Int32;
+        p[7] = new SqlParameter("@roleid", this.roleid);
+        p[7].DbType = DbType.Int16;
+        p[8] = new SqlParameter("@EmpId", this.empid);
+        p[8].DbType = DbType.Int32;
         SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "spRegisterEmployee", p);
     }
     public void DeleteEmployeeDetail()
