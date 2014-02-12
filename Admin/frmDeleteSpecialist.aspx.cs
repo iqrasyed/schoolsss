@@ -66,4 +66,8 @@ public partial class Admin_frmDeleteSpecialist : System.Web.UI.Page
       
         
     }
+    protected void txtName_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }

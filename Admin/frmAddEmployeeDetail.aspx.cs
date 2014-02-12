@@ -26,6 +26,7 @@ public partial class Admin_frmAddEmployeeDetail : System.Web.UI.Page
             emp.Name = txtName.Text.Trim();
             emp.Address = txtAddress.Text.Trim();
             emp.Phone = txtPhone.Text.Trim();
+            emp.Empid = Convert.ToInt32(TextEmpid.Text);
             emp.Email = txtMail.Text.Trim();
             emp.Dutytime = ddlDutyTime.SelectedItem.Text;
             emp.Uname = txtUname.Text.Trim();
@@ -44,18 +45,28 @@ public partial class Admin_frmAddEmployeeDetail : System.Web.UI.Page
         {
             lblMsg.Text = ex.Message.ToString();
         }
-       
+
 
     }
     protected void btnClear_Click(object sender, EventArgs e)
     {
-        txtName.Text="";
-        txtAddress.Text="";
-        txtPhone.Text="";
-        txtMail.Text="";
-        txtUname.Text="";
-        txtPassword.Text="";
+        txtName.Text = "";
+        txtAddress.Text = "";
+        txtPhone.Text = "";
+        txtMail.Text = "";
+        txtUname.Text = "";
+        txtPassword.Text = "";
         lblMsg.Text = "";
+        TextEmpid.Text = "";
+        
+
+    }
+    protected void TextEmpid_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+    protected void txtName_TextChanged(object sender, EventArgs e)
+    {
 
     }
 }

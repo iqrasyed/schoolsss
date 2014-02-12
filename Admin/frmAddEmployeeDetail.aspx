@@ -15,7 +15,8 @@
             <td>
                 <span style="color: #ff3300">Staff</span> Name<span style="color: #ff3300">*</span>:</td>
             <td style="width: 240px">
-                <asp:TextBox ID="txtName" runat="server" Width="174px"></asp:TextBox><asp:RequiredFieldValidator
+                <asp:TextBox ID="txtName" runat="server" Width="174px" 
+                    ontextchanged="txtName_TextChanged"></asp:TextBox><asp:RequiredFieldValidator
                     ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtName" ErrorMessage="*"></asp:RequiredFieldValidator></td>
         </tr>
         <tr style="color: #000000">
@@ -24,6 +25,15 @@
             <td style="width: 240px">
                 <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" Width="174px"></asp:TextBox><asp:RequiredFieldValidator
                     ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtAddress" ErrorMessage="*"></asp:RequiredFieldValidator></td>
+        </tr>
+        <tr style="color: #000000">
+            <td>
+                <span style="color: #ff3300">Staff</span> CNIC<span style="color: #ff3300">*</span>:</td>
+            <td style="width: 240px">
+                <asp:TextBox ID="TextEmpid" runat="server" Width="174px" 
+                 ontextchanged="TextEmpid_TextChanged"></asp:TextBox><asp:RequiredFieldValidator
+                   
+                    ID="RequiredFieldValidator6" runat="server" ControlToValidate="TextEmpid" ErrorMessage="*"></asp:RequiredFieldValidator></td>
         </tr>
         <tr style="color: #000000">
             <td>

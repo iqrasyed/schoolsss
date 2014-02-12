@@ -1,6 +1,10 @@
-<%@ Page Language="C#" MasterPageFile="~/Admin/AdminMenuMasterPage.master" AutoEventWireup="true" CodeFile="frmDeleteSpecialist.aspx.cs" Inherits="Admin_frmDeleteSpecialist" Title="Untitled Page" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Admin/AdminMenuMasterPage.master" AutoEventWireup="true" CodeFile="frmDeleteEmployee.aspx.cs" Inherits="Admin_frmDeleteEmployee" Title="Untitled Page" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<script runat="server">
+
+   
+</script>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:ScriptManager id="ScriptManager1" runat="server">
     </asp:ScriptManager>
@@ -13,7 +17,7 @@
         <tr>
             <td colspan="2" style="text-align: center">
                 <strong><span style="font-size: 16pt; color: red; font-family: Verdana">
-                    Specialist Deletion</span></strong></td>
+                    Employee Deletion</span></strong></td>
         </tr>
         <tr>
             <td align="center" colspan="2">
@@ -26,22 +30,20 @@
             </td>
         </tr>
         <tr>
+        <br>
             <td style="width: 210px; font-weight: bolder; font-size: 8pt; font-family: Verdana;">
-                Specialist Id:<br />
+                Employee CNIC:<br />
                 <br />
-                Specialist Name:<br />
+                Employee Name:<br />
                 <br />
-                Description</td>
             <td style="width: 100px">
-                &nbsp;<asp:UpdatePanel id="UpdatePanel1" runat="server"><contenttemplate>
+                
                 <asp:DropDownList ID="ddlId" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlId_SelectedIndexChanged"
                     Width="188px">
                 </asp:DropDownList><BR />
-                <asp:TextBox ID="txtName" runat="server" ReadOnly="True" Width="213px" 
-                        ontextchanged="txtName_TextChanged"></asp:TextBox><BR />
-                <asp:TextBox ID="txtDesc" runat="server" ReadOnly="True" TextMode="MultiLine" Width="213px"></asp:TextBox>
-</contenttemplate>
-                </asp:UpdatePanel>
+                <asp:TextBox ID="txtName" runat="server" ReadOnly="True" Width="213px"></asp:TextBox><BR />
+<%--</contenttemplate>
+                </asp:UpdatePanel>--%>
             </td>
         </tr>
         <tr>
@@ -61,4 +63,3 @@
         </tr>
     </table>
 </asp:Content>
-
