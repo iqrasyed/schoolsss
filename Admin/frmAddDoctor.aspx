@@ -32,7 +32,7 @@
         <tr style="color: #000000">
             <td style="width: 89px" >
                 <span style="font-size: 8pt; font-family: Verdana"><strong>
-                Doctor Code:</strong></span></td>
+                Doctor CNIC:</strong></span></td>
             <td width="60%" style="height: 26px">
                 <asp:TextBox ID="txtCode" runat="server"></asp:TextBox></td>
             <td style="height: 26px; width: 3px;">
