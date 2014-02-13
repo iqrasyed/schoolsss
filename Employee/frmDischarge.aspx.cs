@@ -33,7 +33,7 @@ public partial class Employee_frmDischarge : System.Web.UI.Page
 
     protected void ddlCode_SelectedIndexChanged(object sender, EventArgs e)
     {
-       
+        string test = "";
         try
         {
             if (ddlCode.SelectedItem.Text == "---Select---")
@@ -73,7 +73,7 @@ public partial class Employee_frmDischarge : System.Web.UI.Page
             txtState.Text = ds.Tables[0].Rows[0][6].ToString();
             txtCity.Text = ds.Tables[0].Rows[0][7].ToString();
             txtAge.Text = ds.Tables[0].Rows[0][8].ToString();
-            txtDrName.Text = ds.Tables[0].Rows[0][10].ToString();
+            //txtDrName.Text = ds.Tables[0].Rows[0][10].ToString();
             txtAdmitDate.Text = ds.Tables[0].Rows[0][11].ToString();
             txtAdmitTime.Text = ds.Tables[0].Rows[0][12].ToString();
             txtAdvance.Text = ds.Tables[0].Rows[0][13].ToString();
@@ -109,37 +109,42 @@ public partial class Employee_frmDischarge : System.Web.UI.Page
             }
            
             //Room Charge Info
-
-            ds3 = new DataSet();
-            ds3 = patient.ShowRoomChargeByCode();
-
-            if (ds3.Tables[0].Rows[0][0].ToString() != "" )
-            {  
-                txtRoomCharge.Text = ds3.Tables[0].Rows[0][0].ToString();
-            }
-            else if(ds3.Tables[0].Rows[0][1].ToString() != "")
+            try
             {
-              
-                txtRoomCode.Text = ds3.Tables[0].Rows[0][1].ToString();
+                ds3 = new DataSet();
+                ds3 = patient.ShowRoomChargeByCode();
+
+                if (ds3.Tables[0].Rows[0][0].ToString() != "")
+                {
+                    txtRoomCharge.Text = ds3.Tables[0].Rows[0][0].ToString();
+                }
+                else if (ds3.Tables[0].Rows[0][1].ToString() != "")
+                {
+
+                    txtRoomCode.Text = ds3.Tables[0].Rows[0][1].ToString();
+                }
+                else
+                {
+                    txtRoomCharge.Text = "0";
+                    txtRoomCode.Text = "";
+                }
             }
-            else
-           
-                txtRoomCharge.Text = "0";
-                txtRoomCode.Text = "";
-           
-           
+            catch (Exception ex) { }
             //Medicine Charge Info
-
-            ds4 = new DataSet();
-            ds4 = patient.ShowMedicineChargeByCode();
-            if (ds4.Tables[0].Rows[0][0].ToString() !="")
+            try
             {
-                txtMedicineCharge.Text = ds4.Tables[0].Rows[0][0].ToString();
+                ds4 = new DataSet();
+                ds4 = patient.ShowMedicineChargeByCode();
+                if (ds4.Tables[0].Rows[0][0].ToString() != "")
+                {
+                    txtMedicineCharge.Text = ds4.Tables[0].Rows[0][0].ToString();
+                }
+                else
+                {
+                    txtMedicineCharge.Text = "0";
+                }
             }
-            else
-            {
-                txtMedicineCharge.Text = "0";
-            }
+            catch (Exception ex) { }
           lblMsg.Text = "";
         }
         catch (Exception ex)
@@ -162,7 +167,7 @@ public partial class Employee_frmDischarge : System.Web.UI.Page
             discharge.Country = txtCountry.Text.Trim();
             discharge.State = txtState.Text.Trim();
             discharge.City = txtCity.Text.Trim();
-            discharge.Doctorname = txtDrName.Text.Trim();
+            discharge.Doctorname = "";// txtDrName.Text.Trim();
             discharge.Roomname = txtRoomCode.Text.Trim();
             discharge.Inout = ddlInOut.SelectedItem.Text.Trim();
             discharge.Admitdate =Convert.ToDateTime(txtAdmitDate.Text.Trim());

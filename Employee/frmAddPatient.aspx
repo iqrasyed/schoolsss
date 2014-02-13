@@ -88,10 +88,9 @@
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtComplain"
                     ErrorMessage="*"></asp:RequiredFieldValidator></td>
             <td style="width: 184px; height: 5px; font-weight: bolder; font-size: 8pt; font-family: verdana;">
-                Doctor Code:</td>
+                &nbsp;</td>
             <td style="height: 11px">
-                <asp:DropDownList ID="ddlDrCode" runat="server" Width="169px">
-                </asp:DropDownList></td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td style="width: 184px; font-weight: bolder; font-size: 8pt; font-family: verdana; height: 5px;">
@@ -103,10 +102,9 @@
                     <asp:ListItem>Female</asp:ListItem>
                 </asp:DropDownList></td>
             <td style="width: 184px; font-weight: bolder; font-size: 8pt; font-family: verdana; height: 5px;">
-                Test Code:</td>
+                &nbsp;</td>
             <td>
-                <asp:DropDownList ID="ddlTestCode" runat="server" Width="169px" Enabled="False">
-                </asp:DropDownList></td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td style="font-weight: bolder; font-size: 8pt; width: 184px; font-family: verdana; height: 5px">
@@ -116,19 +114,15 @@
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtAddress"
                     ErrorMessage="*"></asp:RequiredFieldValidator></td>
             <td style="width: 184px; font-weight: bolder; font-size: 8pt; font-family: verdana; height: 5px;">
-                Room Code:</td>
+                &nbsp;</td>
             <td>
-                <asp:DropDownList ID="ddlRoomCode" runat="server" Width="169px" Enabled="False">
-                </asp:DropDownList></td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td style="font-weight: bolder; font-size: 8pt; width: 184px; font-family: verdana; height: 5px">
-                Country:</td>
+                &nbsp;</td>
             <td style="font-weight: bolder; font-size: 8pt; width: 184px; font-family: verdana; height: 5px">
-                &nbsp;<asp:UpdatePanel id="UpdatePanel1" runat="server"><contenttemplate>
-                <asp:DropDownList ID="ddlCountry" runat="server" Width="185px" AutoPostBack="True" OnSelectedIndexChanged="ddlCountry_SelectedIndexChanged">
-                </asp:DropDownList>
-</contenttemplate>
+                &nbsp;<asp:UpdatePanel id="UpdatePanel1" runat="server">
                 </asp:UpdatePanel></td>
             <td style="width: 184px; font-weight: bolder; font-size: 8pt; font-family: verdana; height: 5px;">
                 Advance:</td>
@@ -139,11 +133,11 @@
         </tr>
         <tr>
             <td style="font-weight: bolder; font-size: 8pt; width: 184px; font-family: verdana; height: 5px">
-                State:</td>
+                &nbsp;</td>
             <td style="font-weight: bolder; font-size: 8pt; width: 184px; font-family: verdana; height: 5px">
-                &nbsp;<asp:UpdatePanel id="UpdatePanel2" runat="server"><contenttemplate>
-                <asp:DropDownList ID="ddlState" runat="server" Width="186px" AutoPostBack="True" OnSelectedIndexChanged="ddlState_SelectedIndexChanged">
-                 
+                &nbsp;</td>
+            <td style="width: 184px; font-weight: bolder; font-size: 8pt; font-family: verdana; height: 5px;">
+                Condition:         
                 </asp:DropDownList>
 </contenttemplate>
                 </asp:UpdatePanel></td>

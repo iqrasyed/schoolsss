@@ -176,10 +176,25 @@ DateTime admitdate,date1,date2;
         ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowPatientInfo", p);
         return ds;
     }
+    public DataSet ShowPatientInfoForCheckin()
+    {
+        ds = new DataSet();
+        SqlParameter[] p = new SqlParameter[1];
+        p[0] = new SqlParameter("@code", this.code);
+        p[0].DbType = DbType.String;
+        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowPatientByCheckIn", p);
+        return ds;
+    }
     public DataSet ShowPatientCode()
     {
         ds = new DataSet();
         ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowPatientCode");
+        return ds;
+    }
+    public DataSet ShowPatientCodeForCheckin()
+    {
+        ds = new DataSet();
+        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowPatientCodeForCheckin");
         return ds;
     }
     public DataSet ShowDoctorChargeByCode()

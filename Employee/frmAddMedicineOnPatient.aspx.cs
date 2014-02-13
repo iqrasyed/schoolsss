@@ -15,4 +15,8 @@ public partial class Employee_frmAddMedicineOnPatient : System.Web.UI.Page
     {
 
     }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        
+    }
 }

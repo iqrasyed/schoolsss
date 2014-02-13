@@ -13,6 +13,7 @@ public partial class Employee_frmAddInPatient : System.Web.UI.Page
 {
     //int time, time1, time2;
     //string time3;
+    DataSet ds;
     CountryBusinessLayer country = new CountryBusinessLayer();
     StateBL state = new StateBL();
     CityBL city = new CityBL();
@@ -28,57 +29,28 @@ public partial class Employee_frmAddInPatient : System.Web.UI.Page
             Response.Redirect("~/frmLogin.aspx");
         }
         if (!IsPostBack)
-        {
-
-
-            city.StateId = 2;// int.Parse(ddlState.SelectedValue);
-            ddlCity.DataSource = city.GetCityByState();
-            ddlCity.DataTextField = "City_Name";
-            ddlCity.DataValueField = "City_Id";
-            ddlCity.DataBind();
-            ddlCity.Items.Insert(0, "---Select---");
-
-            //ddlDrCode.DataSource = doctor.ShowDoctor();
-            //ddlDrCode.DataTextField = "doctor_code";
-            ////ddlDrCode.DataValueField = "doctor_code";
-            //ddlDrCode.DataBind();
-            //ddlDrCode.Items.Insert(0, "---Select---");
-
-            //ddlTestCode.DataSource = test.ShowTest();
-            //ddlTestCode.DataTextField = "test_code";
-            ////ddlTestCode.DataValueField = "test_code";
-            //ddlTestCode.DataBind();
-            //ddlTestCode.Items.Insert(0, "---Select---");
-
-            //ddlRoomCode.DataSource = room.ShowRoom();
-            //ddlRoomCode.DataTextField = "room_code";
-            //ddlRoomCode.DataBind();
-            //ddlRoomCode.Items.Insert(0, "---Select---");
-
-            //time = System.DateTime.Now.TimeOfDay.Hours;
-            //time1 = System.DateTime.Now.TimeOfDay.Minutes;
-            //time2 = System.DateTime.Now.TimeOfDay.Seconds;
-            //time3 =Convert.ToString(time + ":" + time1 + ":" + time2);
-            //txtTime.Text = time3;
+        {           
+            /////            
+            pplCode.DataSource = patient.ShowPatientCodeForCheckin();
+            pplCode.DataTextField = "Patient_code";
+            pplCode.DataBind();
+            pplCode.Items.Insert(0, "---Select---");
+           
+            
           
         }
 
     }
-    
+      
     protected void btnAdd_Click(object sender, EventArgs e)
     {
         try
         {
-            //time = System.DateTime.Now.TimeOfDay.Hours;
-            //time1 = System.DateTime.Now.TimeOfDay.Minutes;
-            //time2 = System.DateTime.Now.TimeOfDay.Seconds;
-            //time3 = Convert.ToString(time + ":" + time1 + ":" + time2);
-
-            patient.Code = txtCode1.Text + txtCode2.Text.Trim();
+            patient.Code = pplCode.SelectedItem.Text;
             patient.Name = txtPname.Text.Trim();
             patient.Hname = txtHname.Text.Trim();
             patient.Complaint = txtComplain.Text.Trim();
-            patient.Sex = ddlSex.SelectedItem.Text;
+            patient.Sex = txtSex.Text;
             patient.Address = txtAddress.Text.Trim();
             patient.Country = "Pakistan";//ddlCountry.SelectedItem.Text.Trim();
             patient.State = "Punjab";// ddlState.SelectedItem.Text.Trim();
@@ -93,6 +65,7 @@ public partial class Employee_frmAddInPatient : System.Web.UI.Page
             patient.Advance = int.Parse(txtAdvance.Text.Trim());
             patient.Condition = txtCondition.Text.Trim();
             patient.AddPatient();
+ 
            // dis.Name = txtComplain.Text.Trim();
            // dis.Doccode = ""; ddlDrCode.SelectedItem.Text.Trim();
           //  dis.InsertDisease();
@@ -104,5 +77,53 @@ public partial class Employee_frmAddInPatient : System.Web.UI.Page
 
             lblMsg.Text = ex.Message.ToString();
         }
+    }
+    protected void pplCode_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        try
+        {
+            if (pplCode.SelectedItem.Text == "---Select---")
+            {
+                txtPname.Text = "";
+                txtHname.Text = "";
+                txtComplain.Text = "";
+               // txtSex.Text = "";
+                txtAddress.Text = "";                
+//                txtCountry.Text = "";
+  //              txtState.Text = "";
+                //txtCity.Text = "";
+                txtAge.Text = "";
+                txtSex.Text = "";
+                txtAdvance.Text = "";
+                txtCondition.Text = "";
+
+            }
+            patient.Code = pplCode.SelectedItem.Text;
+
+            //Patient Info
+
+            ds = new DataSet();
+            ds = patient.ShowPatientInfoForCheckin();
+            city.StateId = 2;
+            ddlCity.DataSource = city.GetCityByState();
+            ddlCity.DataTextField = "City_Name";
+            ddlCity.DataValueField = "City_Id";
+            ddlCity.DataBind();                        
+            txtPname.Text = ds.Tables[0].Rows[0][1].ToString();
+            txtHname.Text = ds.Tables[0].Rows[0][2].ToString();            
+            txtSex.Text = ds.Tables[0].Rows[0][3].ToString();
+            txtAddress.Text = ds.Tables[0].Rows[0][4].ToString();          
+           ddlCity.SelectedIndex =ddlCity.Items.IndexOf(ddlCity.Items.FindByText(ds.Tables[0].Rows[0][5].ToString()));            
+           txtAge.Text = ds.Tables[0].Rows[0][6].ToString();
+          
+        }
+        catch (Exception ex)
+        {
+            lblMsg.Text = ex.ToString(); ;
+        }
+    }
+    protected void ddlCity_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
     }
 }

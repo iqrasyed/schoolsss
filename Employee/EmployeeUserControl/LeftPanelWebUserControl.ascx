@@ -95,7 +95,8 @@
         <ul class="collapse " id="patient-nav">
             <li><a runat="server" href="~/Employee/frmAddDoctorOnPatient.aspx"><i class="icon-angle-right"></i>Doctor on Patient</a></li>
             <li><a runat="server" href="~/Employee/frmAddMedicineOnPatient.aspx"><i class="icon-angle-right"></i>Medicine on Patient</a></li>
-            <li><a runat="server" href="~/Employee/frmAddPatient.aspx"><i class="icon-angle-right"></i>New Patient</a></li>
+            <li><a runat="server" href="~/Employee/frmAddPatient.aspx"><i class="icon-angle-right"></i>Register Patient</a></li>
+            <li><a runat="server" href="~/Employee/frmPatientCheckin.aspx"><i class="icon-angle-right"></i>Checkin Patient</a></li>
             <li><a runat="server" href="~/Employee/frmMedicineCharges.aspx"><i class="icon-angle-right"></i>Medicine Charge</a></li>
             <li><a runat="server" href="~/Employee/frmRoomCharge.aspx"><i class="icon-angle-right"></i>Room Charge</a></li>
             <li><a runat="server" href="~/Employee/frmTestCharge.aspx"><i class="icon-angle-right"></i>Test Charge</a></li>

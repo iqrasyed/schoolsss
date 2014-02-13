@@ -69,7 +69,8 @@
         </tr>
         <tr>
             <td colspan="4" style="text-align: center">
-                <asp:Button ID="Button1" runat="server" Text="Add" CssClass="btn btn-primary" />
+                <asp:Button ID="Button1" runat="server" Text="Add" CssClass="btn btn-primary" 
+                    onclick="Button1_Click" />
             </td>
         </tr>
     </table>
