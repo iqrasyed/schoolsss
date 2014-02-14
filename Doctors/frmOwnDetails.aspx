@@ -5,8 +5,7 @@
     <table align="center">
         <tr>
             <td colspan="1" style="text-align: center; width: 540px; height: 27px;">
-                <strong><span style="font-size: 16pt; color: red; font-family: Verdana">Doctor's
-                    Details</span></strong></td>
+                <strong><span style="font-size: 16pt; color: red; font-family: Verdana">Profile</span></strong></td>
         </tr>
         <tr>
             <td colspan="1" style="width: 540px; height: 27px; text-align: center">

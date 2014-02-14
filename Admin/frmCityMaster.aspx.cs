@@ -11,29 +11,20 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_frmCityMaster : System.Web.UI.Page
 {
-    StateBL state = new StateBL();
+    //StateBL state = new StateBL();
     CityBL city = new CityBL();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)
         {
             Response.Redirect("~/Admin/frmAdminLogin.aspx");
-        }
-        if (!IsPostBack)
-        {
-            DdlState.DataSource = state.ShowAllState();
-            DdlState.DataTextField = "State_Name";
-            DdlState.DataValueField = "State_Id";
-            DdlState.DataBind();
-
-        }
-
+        }       
     }
     protected void BtnAdd_Click(object sender, EventArgs e)
     {
         city.CityName = txtName.Text.Trim();
         city.CityDesc = txtDesc.Text.Trim();
-        city.StateId = int.Parse(DdlState.SelectedValue);
+        city.StateId = 2;
         city.InsertCity();
         lblMsg.Text = "City Inserted Successfully...!";
         txtName.Focus();

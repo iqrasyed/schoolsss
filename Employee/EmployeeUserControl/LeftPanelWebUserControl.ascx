@@ -90,14 +90,21 @@
 
     <li class="accordion-group ">
         <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed" data-target="#patient-nav">
-            <i class="icon-pencil icon-large"></i> Add Patient Record <span class="label label-inverse pull-right">6</span>
+            <i class="icon-pencil icon-large"></i> Reception <span class="label label-inverse pull-right">2</span>
         </a>
         <ul class="collapse " id="patient-nav">
-            <li><a runat="server" href="~/Employee/frmAddDoctorOnPatient.aspx"><i class="icon-angle-right"></i>Doctor on Patient</a></li>
-            <li><a runat="server" href="~/Employee/frmAddMedicineOnPatient.aspx"><i class="icon-angle-right"></i>Medicine on Patient</a></li>
             <li><a runat="server" href="~/Employee/frmAddPatient.aspx"><i class="icon-angle-right"></i>Register Patient</a></li>
-            <li><a runat="server" href="~/Employee/frmPatientCheckin.aspx"><i class="icon-angle-right"></i>Checkin Patient</a></li>
-            <li><a runat="server" href="~/Employee/frmMedicineCharges.aspx"><i class="icon-angle-right"></i>Medicine Charge</a></li>
+            <li><a runat="server" href="~/Employee/frmPatientCheckin.aspx"><i class="icon-angle-right"></i>Checkin Patient</a></li>            
+        </ul>
+    </li>
+    <li class="accordion-group ">
+        <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed" data-target="#patient-na1">
+            <i class="icon-pencil icon-large"></i> Assignments <span class="label label-inverse pull-right">5</span>
+        </a>
+        <ul class="collapse " id="patient-na1">
+            <li><a  runat="server" href="~/Employee/frmAddDoctorOnPatient.aspx"><i class="icon-angle-right"></i>Doctor on Patient</a></li>
+            <li><a  runat="server" href="~/Employee/frmAddMedicineOnPatient.aspx"><i class="icon-angle-right"></i>Medicine on Patient</a></li>            
+            <li><a  runat="server" href="~/Employee/frmMedicineCharges.aspx"><i class="icon-angle-right"></i>Medicine Charge</a></li>
             <li><a runat="server" href="~/Employee/frmRoomCharge.aspx"><i class="icon-angle-right"></i>Room Charge</a></li>
             <li><a runat="server" href="~/Employee/frmTestCharge.aspx"><i class="icon-angle-right"></i>Test Charge</a></li>
         </ul>
