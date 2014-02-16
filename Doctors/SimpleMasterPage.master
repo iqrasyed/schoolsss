@@ -60,27 +60,7 @@
                                         <i class="icon-resize-horizontal"></i>
                                     </a>
                                 </div>
-                                <%-- <div class="btn-group">
-                                    <a class="btn btn-inverse" rel="tooltip" data-original-title="E-mail" data-placement="bottom">
-                                        <i class="icon-envelope"></i>
-                                        <span class="label label-warning">5</span>
-                                    </a>
-                                    <a class="btn btn-inverse" rel="tooltip" href="#" data-original-title="Messages"
-                                        data-placement="bottom">
-                                        <i class="icon-comments"></i>
-                                        <span class="label label-important">4</span>
-                                    </a>
-                                </div>
-                                <div class="btn-group">
-                                    <a class="btn btn-inverse" rel="tooltip" href="#" data-original-title="Document"
-                                        data-placement="bottom">
-                                        <i class="icon-file"></i>
-                                    </a>
-                                    <a href="#helpModal" class="btn btn-inverse" rel="tooltip" data-placement="bottom"
-                                        data-original-title="Help" data-toggle="modal">
-                                        <i class="icon-question-sign"></i>
-                                    </a>
-                                </div>--%>
+                              
                                 <div class="btn-group">
                                     <a class="btn btn-inverse" data-placement="bottom" data-original-title="Logout" rel="tooltip"
                                         href="~/Doctor/frmLogout.aspx" runat="server"><i class="icon-off"></i></a>

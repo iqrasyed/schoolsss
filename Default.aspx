@@ -4,14 +4,11 @@
         <div class="container">
                 <div class="row">
 	                <h3 class="span12" style="text-align:center">Our Recent Work</h3>
-	               We are making this system
-                   We are making this system
-                   We are making this system
-                   We are making this system
-                   We are making this system
-                   We are making this system
-                   We are making this system
-                   We are making this system
+	               We are making PIMS
+                   We are making PIMS
+                   We are making PIMS
+                   We are making PIMS
+                   We are making PIMS
 
                 </div>                
         </div>

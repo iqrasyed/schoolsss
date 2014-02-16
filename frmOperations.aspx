@@ -6,7 +6,7 @@
             <td align="right">
                 <img src="Images/UNDERCON.GIF" style="width: 130px" /></td>
             <td align="left">
-                <strong><span style="font-size: 24pt; color: #ff3300; font-family: Verdana;">UNDER CONSTRUCTION</span></strong></td>
+                <strong><span style="font-size: 24pt; color: #ff3300; font-family: Verdana;">.....</span></strong></td>
         </tr>
     </table>
 </asp:Content>
