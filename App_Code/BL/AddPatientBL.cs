@@ -185,6 +185,15 @@ DateTime admitdate,date1,date2;
         ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowPatientByCheckIn", p);
         return ds;
     }
+    public DataSet ShowPatientHistory()
+    {
+        ds = new DataSet();
+        SqlParameter[] p = new SqlParameter[1];
+        p[0] = new SqlParameter("@code", this.code);
+        p[0].DbType = DbType.String;
+        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowPatientByHistory", p);
+        return ds;
+    }
     public DataSet ShowPatientCode()
     {
         ds = new DataSet();

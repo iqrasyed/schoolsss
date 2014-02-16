@@ -22,7 +22,8 @@
                     <asp:MenuItem Text="Login" Value="Login">                        
                         <asp:MenuItem Text="Admin" Value="Admin" NavigateUrl="~/Admin/Default.aspx"></asp:MenuItem>
                         <asp:MenuItem Text="Doctor" Value="Doctor" NavigateUrl="~/Doctors/frmLogin.aspx"></asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/Employee/frmLogin.aspx" Text="Employee" Value="Employee"></asp:MenuItem>                       
+                        <asp:MenuItem NavigateUrl="~/Employee/frmLogin.aspx" Text="Employee" Value="Employee"></asp:MenuItem> 
+                        <asp:MenuItem NavigateUrl="~/frmPaitentHistoryN.aspx" Text="Paitent" Value="Paitent"></asp:MenuItem>                         
                     </asp:MenuItem> 
                     <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
                 </Items>

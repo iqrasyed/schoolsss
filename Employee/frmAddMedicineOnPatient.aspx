@@ -1,78 +1,48 @@
 <%@ Page Language="C#" MasterPageFile="~/Employee/MasterPage.master" AutoEventWireup="true" CodeFile="frmAddMedicineOnPatient.aspx.cs" Inherits="Employee_frmAddMedicineOnPatient" Title="Untitled Page" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
     <table align="center" >
         <tr>
-            <td colspan="15" style="text-align: center">
+            <td colspan="2" style="height: 26px; text-align: center">
                 &nbsp;&nbsp;
             </td>
         </tr>
         <tr>
-            <td colspan="15" style="text-align: center">
-                <strong><span style="font-size: 16pt; color: red; font-family: Verdana">Medicine
-                    Addition</span></strong></td>
-        </tr>
+            <td colspan="2" style="height: 26px; text-align: center">
+                <strong><span style="font-size: 16pt; color: red; font-family: Verdana;">Medicine Charges</span></strong></td>
+        </tr> 
         <tr>
-            <td colspan="15" style="text-align: center">
-                &nbsp;&nbsp;
-            </td>
-        </tr>
+            <td align="center" colspan="2">
+                <asp:Label ID="lblMsg" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#0000C0"
+                    Width="250px" CssClass="label"></asp:Label></td>
+        </tr>      
         <tr>
-            <td style="width: 149px; font-weight: bolder; font-size: 8pt; font-family: verdana;">
-                Date:</td>
-            <td style="width: 100px">
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 149px; font-weight: bolder; font-size: 8pt; font-family: verdana;">
+            <td style="width: 154px; font-weight: bolder; font-size: 8pt; font-family: verdana; height: 21px;">
                 Patient Code:</td>
-            <td style="width: 100px">
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></td>
-        </tr>
-        <tr>
-            <td style="width: 149px; font-weight: bolder; font-size: 8pt; font-family: verdana;">
-                Landing Cost:</td>
-            <td style="width: 100px">
-                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>
-        </tr>
-        <tr>
-            <td colspan="2" style="text-align: center">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Height="160px"
-                    Width="119px">
-                    <Columns>
-                        <asp:TemplateField HeaderText="Code"></asp:TemplateField>
-                        <asp:TemplateField HeaderText="Description"></asp:TemplateField>
-                        <asp:TemplateField HeaderText="Qty"></asp:TemplateField>
-                        <asp:TemplateField HeaderText="Sp"></asp:TemplateField>
-                        <asp:TemplateField HeaderText="Total"></asp:TemplateField>
-                    </Columns>
-                </asp:GridView>
+            <td style="width: 217px">
+                <asp:DropDownList ID="ddlPatientCode" runat="server" Width="153px" 
+                    onselectedindexchanged="ddlPatientCode_SelectedIndexChanged">
+                </asp:DropDownList>
+                <asp:DropDownList ID="DropDownList1" runat="server" 
+                    onselectedindexchanged="DropDownList1_SelectedIndexChanged">
+                </asp:DropDownList>
             </td>
         </tr>
+       
         <tr>
-            <td colspan="2" style="text-align: center">
-                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" Height="175px"
-                    Width="12px">
-                    <Columns>
-                        <asp:TemplateField HeaderText="Code"></asp:TemplateField>
-                        <asp:TemplateField HeaderText="Description"></asp:TemplateField>
-                        <asp:TemplateField HeaderText="Qty"></asp:TemplateField>
-                        <asp:TemplateField HeaderText="Sp"></asp:TemplateField>
-                        <asp:TemplateField HeaderText="Total"></asp:TemplateField>
-                    </Columns>
-                </asp:GridView>
-            </td>
+            <td style="width: 154px; font-weight: bolder; font-size: 8pt; font-family: verdana; height: 21px;">
+                Paitent Name:</td>
+            <td style="width: 217px">
+                <asp:TextBox ID="txtName" runat="server" ReadOnly="True"></asp:TextBox></td>
         </tr>
+        
+        
         <tr>
-            <td colspan="2" style="text-align: center">
+            <td style="text-align: center;" colspan="2">
                 &nbsp;&nbsp;
-            </td>
+                </td>
         </tr>
-        <tr>
-            <td colspan="4" style="text-align: center">
-                <asp:Button ID="Button1" runat="server" Text="Add" CssClass="btn btn-primary" 
-                    onclick="Button1_Click" />
-            </td>
-        </tr>
+       
     </table>
 </asp:Content>
 

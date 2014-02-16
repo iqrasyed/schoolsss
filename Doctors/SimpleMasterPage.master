@@ -162,8 +162,8 @@
                     <li><a href="~/Doctor/frmOwnDetails.aspx" runat="server"><i class="icon-dashboard icon-large"></i>Own Detail</a></li> 
                     <li><a href="~/Doctor/frmShowAppointedPatient.aspx" runat="server"><i class="icon-dashboard icon-large"></i>Appointed Patient</a></li>
                     <li><a href="~/Doctor/frmChagePassword.aspx" runat="server"><i class="icon-dashboard icon-large"></i>Change Password</a></li> 
-                    <li><a href="#"><i class="icon-table icon-large"></i>D</a></li>
-                    <li><a href="#"><i class="icon-table icon-large"></i>C</a></li>
+                    <li><a href="~/Doctor/frmPaitentHistoryN.aspx" runat="server"><i class="icon-table icon-large"></i>Paitent History</a></li>
+                    <li><a href="Javascript.void(0);"><i class="icon-table icon-large"></i>C</a></li>
                     <li><a href="#"><i class="icon-table icon-large"></i>Category</a></li>
                     <li><a href="#"><i class="icon-table icon-large"></i>Products</a></li>
                     <li><a href="#"><i class="icon-table icon-large"></i>Deals</a></li>

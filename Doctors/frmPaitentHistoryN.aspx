@@ -1,4 +1,9 @@
-<%@ Page Language="C#" MasterPageFile="~/Employee/MasterPage.master" AutoEventWireup="true" CodeFile="frmAllDoctor.aspx.cs" Inherits="Admin_Search_frmAllDoctor" Title="Untitled Page" %>
+<%@ Page Language="C#" MasterPageFile="~/Doctors/MasterPage.master" AutoEventWireup="true" CodeFile="frmPaitentHistoryN.aspx.cs" Inherits="Doctors_frmPaitentHistoryN" Title="Untitled Page" %>
+
+<script runat="server">
+
+    
+</script>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <table align="center">
         <tr>
@@ -10,7 +15,7 @@
             <td colspan="2" style="text-align: center">
                 <strong><span style="font-size: 16pt; color:red">
                     <asp:ScriptManager id="ScriptManager1" runat="server">
-                    </asp:ScriptManager>List of Doctors</span></strong></td>
+                    </asp:ScriptManager>Paitent History</span></strong></td>
         </tr>
         <tr>
             <td colspan="2" style="text-align: center; height: 24px;">
@@ -19,6 +24,8 @@
         </tr>
         <tr>
             <td colspan="2" style="height: 24px; text-align: center">
+                <asp:Label ID="Label1" runat="server" Text="CNIC"></asp:Label>
+                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                 &nbsp;&nbsp;
             </td>
         </tr>
@@ -26,7 +33,7 @@
             <td colspan="2" align="center">
                 <asp:UpdatePanel id="UpdatePanel1" runat="server">
                     <contenttemplate>
-<asp:Button id="btnShow" onclick="btnShow_Click" runat="server" Width="124px" Font-Size="X-Small" Font-Bold="True" Text="Show All Doctor" Font-Names="Verdana"></asp:Button>&nbsp; <BR /><BR />
+<asp:Button id="btnShow" onclick="btnShow_Click" runat="server" Width="124px" Font-Size="X-Small" Font-Bold="True" Text="Paitent History" Font-Names="Verdana"></asp:Button>&nbsp; <BR /><BR />
 <asp:GridView id="GridView1" runat="server" Width="18px" CellPadding="4" BorderWidth="1px" BorderStyle="None" BorderColor="#3366CC" BackColor="White" PageSize="5" OnPageIndexChanging="GridView1_PageIndexChanging" AllowPaging="True">
 <FooterStyle BackColor="#99CCCC" ForeColor="#003399"></FooterStyle>
 

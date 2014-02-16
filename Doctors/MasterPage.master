@@ -241,6 +241,7 @@
                     <li><a id="A3" href="~/Doctors/frmOwnDetails.aspx" runat="server"><i class="icon-dashboard icon-large"></i>Profile</a></li> 
                     <li><a id="A4" href="~/Doctors/frmShowAppointedPateint.aspx" runat="server"><i class="icon-dashboard icon-large"></i>Appointed Patient</a></li>
                     <li><a id="A5" href="~/Doctors/frmChangePassword.aspx" runat="server"><i class="icon-dashboard icon-large"></i>Change Password</a></li> 
+                    <li><a id="A6" href="~/Doctors/frmPaitentHistoryN.aspx" runat="server"><i class="icon-table icon-large"></i>Paitent History</a></li>
                     <li><a href="#"><i class="icon-table icon-large"></i>D</a></li>
                     <li><a href="#"><i class="icon-table icon-large"></i>C</a></li>
                     <li><a href="#"><i class="icon-table icon-large"></i>Category</a></li>
