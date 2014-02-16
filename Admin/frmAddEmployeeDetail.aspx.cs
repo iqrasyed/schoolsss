@@ -29,6 +29,7 @@ public partial class Admin_frmAddEmployeeDetail : System.Web.UI.Page
             emp.Empid = Convert.ToInt32(TextEmpid.Text);
             emp.Email = txtMail.Text.Trim();
             emp.Dutytime = ddlDutyTime.SelectedItem.Text;
+            emp.Salary = txtSalary.Text.Trim();
             emp.Uname = txtUname.Text.Trim();
             emp.Password = txtPassword.Text.Trim();
             emp.Roleid = 2;

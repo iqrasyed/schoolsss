@@ -21,7 +21,7 @@ public class DoctorMasterBL:Connection
 		// TODO: Add constructor logic here
 		//
 	}
-   string code,name,desc,time1,time2,contactno,username,password;
+   string code,name,desc,time1,time2,contactno,username,password,salary;
     public string Username
     {
         get { return username; }
@@ -31,6 +31,11 @@ public class DoctorMasterBL:Connection
     {
         get { return password; }
         set { password = value; }
+    }
+    public string Salary
+    {
+        get { return salary; }
+        set { salary = value; }
     }
     public string Time1
     {
@@ -79,7 +84,7 @@ public class DoctorMasterBL:Connection
     }
     public void InsertDoctor()
     {
-        SqlParameter[] p = new SqlParameter[11];
+        SqlParameter[] p = new SqlParameter[12];
         p[0] = new SqlParameter("@code", this.code);
         p[0].DbType = DbType.String; 
         p[1] = new SqlParameter("@name", this.name);
@@ -102,6 +107,8 @@ public class DoctorMasterBL:Connection
         p[9].DbType = DbType.String;
         p[10] = new SqlParameter("@roleid", this.roleid);
         p[10].DbType = DbType.Int16;
+        p[11] = new SqlParameter("@salary", this.salary);
+        p[11].DbType = DbType.String;
         SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "SpInsertDoctor", p);
     }
     public DataSet ShowDoctor()

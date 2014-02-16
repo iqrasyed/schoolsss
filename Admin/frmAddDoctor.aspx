@@ -106,6 +106,14 @@
         <tr style="color: #000000">
             <td style="width: 89px" >
                 <span style="font-size: 8pt; font-family: Verdana"><strong>
+                Salary:</strong></span></td>
+            <td >
+                <asp:TextBox ID="txtSalary" runat="server"></asp:TextBox></td>
+            <td style="width: 3px" >                
+        </tr>
+        <tr style="color: #000000">
+            <td style="width: 89px" >
+                <span style="font-size: 8pt; font-family: Verdana"><strong>
                 Charges:</strong></span></td>
             <td width="60%">
                 <asp:TextBox ID="txtCharges" runat="server"></asp:TextBox>

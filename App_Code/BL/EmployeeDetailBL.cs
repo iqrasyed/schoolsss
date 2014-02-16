@@ -12,20 +12,25 @@ using HospitalMgmt.DAL;
 /// <summary>
 /// Summary description for EmployeeDetailBL
 /// </summary>
-public class EmployeeDetailBL:Connection
+public class EmployeeDetailBL : Connection
 {
     public static DataSet ds;
-	public EmployeeDetailBL()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
-    string name, address, phone, email, dutytime,uname,password;
+    public EmployeeDetailBL()
+    {
+        //
+        // TODO: Add constructor logic here
+        //
+    }
+    string name, address, phone, email, dutytime, uname, password, salary;
     public string Name
     {
         get { return name; }
         set { name = value; }
+    }
+    public string Salary
+    {
+        get { return salary; }
+        set { salary = value; }
     }
     public string Address
     {
@@ -40,7 +45,7 @@ public class EmployeeDetailBL:Connection
     public string Email
     {
         get { return email; }
-        set {email = value; }
+        set { email = value; }
     }
     public string Dutytime
     {
@@ -58,20 +63,20 @@ public class EmployeeDetailBL:Connection
         set { password = value; }
     }
     int roleid;
-   int empid;
+    int empid;
     public int Roleid
     {
         get { return roleid; }
         set { roleid = value; }
-    }    
+    }
     public int Empid
-{
+    {
         get { return empid; }
         set { empid = value; }
-}   
+    }
     public void InsertEmployeeDetail()
     {
-        SqlParameter[] p = new SqlParameter[9];
+        SqlParameter[] p = new SqlParameter[10];
         p[0] = new SqlParameter("@name", this.name);
         p[0].DbType = DbType.String;
         p[1] = new SqlParameter("@address", this.address);
@@ -90,13 +95,15 @@ public class EmployeeDetailBL:Connection
         p[7].DbType = DbType.Int16;
         p[8] = new SqlParameter("@EmpId", this.empid);
         p[8].DbType = DbType.Int32;
+        p[9] = new SqlParameter("@salary", this.salary);
+        p[9].DbType = DbType.String;
         SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "spRegisterEmployee", p);
     }
     public void DeleteEmployeeDetail()
-{
-    SqlParameter[] p = new SqlParameter[1];
-    p[0] = new SqlParameter("@EmpId", this.empid);
-    p[0].DbType = DbType.Int16;
-    SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "SpDeleteEmployee", p);
-}
+    {
+        SqlParameter[] p = new SqlParameter[1];
+        p[0] = new SqlParameter("@EmpId", this.empid);
+        p[0].DbType = DbType.Int16;
+        SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "SpDeleteEmployee", p);
+    }
 }

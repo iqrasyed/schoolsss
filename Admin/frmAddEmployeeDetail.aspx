@@ -59,6 +59,12 @@
         </tr>
         <tr style="color: #000000">
             <td>
+                Salary<span style="color: #ff3300">*</span>:</td>
+            <td style="width: 240px">
+                <asp:TextBox ID="txtSalary" runat="server" Width="174px"></asp:TextBox></td>
+        </tr>
+        <tr style="color: #000000">
+            <td>
                 User Name<span style="color: #ff3300">*</span>:</td>
             <td style="width: 240px">
                 <asp:TextBox ID="txtUname" runat="server" Width="174px"></asp:TextBox><asp:RequiredFieldValidator

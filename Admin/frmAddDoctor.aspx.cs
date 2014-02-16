@@ -75,6 +75,7 @@ public partial class Admin_frmAddDoctor : System.Web.UI.Page
             doctor.Desc = txtDesc.Text.Trim();
             doctor.Username = txtUName.Text.Trim();
             doctor.Password = txtPassword.Text.Trim();
+            doctor.Salary = txtSalary.Text.Trim();
             doctor.Roleid = 3;
             doctor.InsertDoctor();
             lblMsg.Text = "Inserted...!";
@@ -82,6 +83,7 @@ public partial class Admin_frmAddDoctor : System.Web.UI.Page
             txtContact.Text = "";
             txtDesc.Text = "";
             txtName.Text = "";
+            txtSalary.Text = "";
             txtPassword.Text = "";
             txtTime1.Text = "";
             txtTime2.Text = "";
