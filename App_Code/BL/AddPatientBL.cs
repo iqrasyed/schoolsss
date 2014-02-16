@@ -284,6 +284,15 @@ DateTime admitdate,date1,date2;
         ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowPatientCodeByStatus");
         return ds;
     }
+
+    public void AddPatientPrescription()
+    {
+        SqlParameter[] p = new SqlParameter[18];
+        p[0] = new SqlParameter("@code", this.code);
+        p[0].DbType = DbType.String;
+        p[1] = new SqlParameter("@name", this.name);
+        p[1].DbType = DbType.String;
+    }
     public void DeletePatientPermanently()
     {
         SqlParameter[] p = new SqlParameter[1];
