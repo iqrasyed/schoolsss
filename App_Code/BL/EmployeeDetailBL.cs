@@ -76,6 +76,7 @@ public class EmployeeDetailBL : Connection
     }
     public void InsertEmployeeDetail()
     {
+
         SqlParameter[] p = new SqlParameter[10];
         p[0] = new SqlParameter("@name", this.name);
         p[0].DbType = DbType.String;
@@ -92,7 +93,7 @@ public class EmployeeDetailBL : Connection
         p[6] = new SqlParameter("@password", this.password);
         p[6].DbType = DbType.String;
         p[7] = new SqlParameter("@roleid", this.roleid);
-        p[7].DbType = DbType.Int16;
+        p[7].DbType = DbType.Int16;                
         p[8] = new SqlParameter("@EmpId", this.empid);
         p[8].DbType = DbType.Int32;
         p[9] = new SqlParameter("@salary", this.salary);
