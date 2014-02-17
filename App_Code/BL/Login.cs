@@ -10,12 +10,12 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using HospitalMgmt.DAL;
 /// <summary>
-/// Summary description for LoginInfoBL
+/// Summary description for Login
 /// </summary>
-public class LoginInfoBL:Connection
+public class Login:Connection
 {
     public static DataSet ds;
-	public LoginInfoBL()
+	public Login()
 	{
 		//
 		// TODO: Add constructor logic here

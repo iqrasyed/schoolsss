@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_frmAddMedicine : System.Web.UI.Page
 {
-    MedicineMasterBL medicine = new MedicineMasterBL();
+    Medicine medicine = new Medicine();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

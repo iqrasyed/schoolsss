@@ -10,11 +10,11 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using HospitalMgmt.DAL;
 /// <summary>
-/// Summary description for MedicineMasterBL
+/// Summary description for Medicine
 /// </summary>
-public class MedicineMasterBL:Connection
+public class Medicine:Connection
 {public static DataSet ds;
-	public MedicineMasterBL()
+	public Medicine()
 	{
 		//
 		// TODO: Add constructor logic here

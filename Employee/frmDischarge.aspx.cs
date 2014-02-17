@@ -12,9 +12,9 @@ using System.Web.UI.HtmlControls;
 public partial class Employee_frmDischarge : System.Web.UI.Page
 {
     DataSet ds, ds1, ds2, ds3, ds4;
-    AddPatientBL patient = new AddPatientBL();
-    DischargePatientBL discharge = new DischargePatientBL();
-    RoomChargeBL room = new RoomChargeBL();
+    Patient patient = new Patient();
+    Discharge discharge = new Discharge();
+    RoomAssignment room = new RoomAssignment();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

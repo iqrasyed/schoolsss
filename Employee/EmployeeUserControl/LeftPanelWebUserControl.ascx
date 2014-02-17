@@ -17,7 +17,7 @@
             <i class="icon-pencil icon-large"></i> Assignments <span class="label label-inverse pull-right">5</span>
         </a>
         <ul class="collapse " id="patient-na1">
-            <li><a  runat="server" href="~/Employee/frmAddDoctorOnPatient.aspx"><i class="icon-angle-right"></i>Assign Doctor</a></li>
+            <li><a  runat="server" href="~/Employee/frmDoctorOnPatient.aspx"><i class="icon-angle-right"></i>Assign Doctor</a></li>
             <li><a  runat="server" href="~/Employee/frmPrescription.aspx"><i class="icon-angle-right"></i>Prescription</a></li>            
             <li><a  runat="server" href="~/Employee/frmMedicineCharges.aspx"><i class="icon-angle-right"></i>Medicines</a></li>
             <li><a runat="server" href="~/Employee/frmRoomCharge.aspx"><i class="icon-angle-right"></i>Room</a></li>

@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_frmAddRoom : System.Web.UI.Page
 {
-    RoomMasterBL room = new RoomMasterBL();
+    Room room = new Room();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

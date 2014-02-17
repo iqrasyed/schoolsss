@@ -11,8 +11,8 @@ using System.Web.UI.HtmlControls;
 
 public partial class Employee_frmAddTestOnPatient : System.Web.UI.Page
 {
-    AddPatientBL pat = new AddPatientBL();
-    TestMasterBL test = new TestMasterBL();
+    Patient pat = new Patient();
+    Test test = new Test();
     TestChargeBL charge = new TestChargeBL();
     protected void Page_Load(object sender, EventArgs e)
     {

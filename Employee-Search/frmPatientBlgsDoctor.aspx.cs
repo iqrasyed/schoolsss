@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_Search_frmPatientBlgsDoctor : System.Web.UI.Page
 {
-    AddDoctorOnPatient doc = new AddDoctorOnPatient();
+    DoctorOnPatient doc = new DoctorOnPatient();
     
     protected void Page_Load(object sender, EventArgs e)
     {

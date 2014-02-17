@@ -10,34 +10,39 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using HospitalMgmt.DAL;
 /// <summary>
-/// Summary description for RoomChargeBL
+/// Summary description for DoctorOnPatient
 /// </summary>
-public class RoomChargeBL:Connection
+public class DoctorOnPatient:Connection
 {
     public static DataSet ds;
-	public RoomChargeBL()
+	public DoctorOnPatient()
 	{
 		//
 		// TODO: Add constructor logic here
 		//
 	}
-   string code,roomcode,time;
+    string code, doccode, time,specialist;
     public string Code
     {
         get { return code; }
         set { code = value; }
     }
-    public string Roomcode
+    public string Doccode
     {
-        get { return roomcode; }
-        set { roomcode = value; }
+        get { return doccode; }
+        set { doccode = value; }
     }
     public string Time
     {
         get { return time; }
         set { time = value; }
     }
-   int charge;
+    public string Specialist
+    {
+        get { return specialist; }
+        set { specialist = value; }
+    }
+    int charge;
     public int Charge
     {
         get { return charge; }
@@ -49,12 +54,12 @@ public class RoomChargeBL:Connection
         get { return date; }
         set { date = value; }
     }
-    public void InsertRoomCharge()
+    public void InsertDoctorCharge()
     {
-        SqlParameter[] p = new SqlParameter[5];
+        SqlParameter[] p = new SqlParameter[6];
         p[0] = new SqlParameter("@code", this.code);
         p[0].DbType = DbType.String;
-        p[1] = new SqlParameter("@roomcode", this.roomcode);
+        p[1] = new SqlParameter("@doccode", this.doccode);
         p[1].DbType = DbType.String;
         p[2] = new SqlParameter("@date", this.date);
         p[2].DbType = DbType.DateTime;
@@ -62,39 +67,33 @@ public class RoomChargeBL:Connection
         p[3].DbType = DbType.String;
         p[4] = new SqlParameter("@charge", this.charge);
         p[4].DbType = DbType.Int32;
-        SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "SpInsertRoomCharges", p);
+        p[5] = new SqlParameter("@specialist", this.specialist);
+        p[5].DbType = DbType.String;
+        SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "SpInsertDoctorCharges", p);
 
     }
-    public DataSet ShowPatientRoomCode()
+    public DataSet ShowDoctorOnPatient()
     {
         ds = new DataSet();
-        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowPatientRoomCode");
+        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowDoctorOnPatient");
         return ds;
     }
-    public DataSet ShowRoomNameByCode()
+    public DataSet ShowPatientInfoByDoctor()
     {
-        SqlParameter[] p = new SqlParameter[1];
-        p[0] = new SqlParameter("@code", this.roomcode);
-        p[0].DbType = DbType.String;
         ds = new DataSet();
-        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowRoomNameByCode",p);
+        SqlParameter[] p = new SqlParameter[1];
+        p[0] = new SqlParameter("@drcode", this.doccode);
+        p[0].DbType = DbType.String;
+        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowPatientInfoByDoctor",p);
         return ds;
     }
-    public DataSet ShowPatientInfoByRoomCode()
+    public DataSet ShowDoctorNameByCode()
     {
-        SqlParameter[] p = new SqlParameter[1];
-        p[0] = new SqlParameter("@code", this.roomcode);
-        p[0].DbType = DbType.String;
         ds = new DataSet();
-        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowPatientInfoByRoomCode", p);
-        return ds;
-    }
-     public void UpdateRoomMaster()
-    {
         SqlParameter[] p = new SqlParameter[1];
-        p[0] = new SqlParameter("@code", this.code);
+        p[0] = new SqlParameter("@drcode", this.doccode);
         p[0].DbType = DbType.String;
-        SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "SpUpdateRoomMaster", p);
-
+        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowDoctorNameByCode", p);
+        return ds;
     }
 }

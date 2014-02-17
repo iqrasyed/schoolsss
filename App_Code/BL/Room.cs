@@ -11,12 +11,12 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using HospitalMgmt.DAL;
 /// <summary>
-/// Summary description for RoomMasterBL
+/// Summary description for Room
 /// </summary>
-public class RoomMasterBL : Connection
+public class Room : Connection
 {
     public static DataSet ds;
-    public RoomMasterBL()
+    public Room()
     {
         //
         // TODO: Add constructor logic here

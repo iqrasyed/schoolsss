@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Employee_frmAllDeletion : System.Web.UI.Page
 {
-    AddPatientBL patient = new AddPatientBL();
+    Patient patient = new Patient();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

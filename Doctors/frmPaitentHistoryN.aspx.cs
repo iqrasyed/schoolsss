@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Doctors_frmPaitentHistoryN : System.Web.UI.Page
 {
-    AddPatientBL paitent = new AddPatientBL();
+    Patient paitent = new Patient();
     protected void Page_Load(object sender, EventArgs e)
     {
 

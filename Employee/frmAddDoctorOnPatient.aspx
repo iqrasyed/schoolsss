@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Employee/MasterPage.master" AutoEventWireup="true" CodeFile="frmAddDoctorOnPatient.aspx.cs" Inherits="Employee_frmAddDoctorOnPatient" Title="Untitled Page" %>
+<%@ Page Language="C#" MasterPageFile="~/Employee/MasterPage.master" AutoEventWireup="true" CodeFile="frmDoctorOnPatient.aspx.cs" Inherits="Employee_frmDoctorOnPatient" Title="Untitled Page" %>
 
 <%@ Register Assembly="GMDatePicker" Namespace="GrayMatterSoft" TagPrefix="cc1" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc2" %>

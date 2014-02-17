@@ -10,12 +10,12 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using HospitalMgmt.DAL;
 /// <summary>
-/// Summary description for DischargePatientBL
+/// Summary description for Discharge
 /// </summary>
-public class DischargePatientBL:Connection
+public class Discharge:Connection
 {
     public static DataSet ds;
-	public DischargePatientBL()
+	public Discharge()
 	{
 		//
 		// TODO: Add constructor logic here

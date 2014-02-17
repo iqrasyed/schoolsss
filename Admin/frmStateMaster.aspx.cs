@@ -12,7 +12,7 @@ using System.Web.UI.HtmlControls;
 public partial class Admin_frmStateMaster : System.Web.UI.Page
 {
     CountryBusinessLayer country = new CountryBusinessLayer();
-    StateBL state = new StateBL();
+    State state = new State();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

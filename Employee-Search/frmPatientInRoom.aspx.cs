@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_Search_frmPatientInRoom : System.Web.UI.Page
 {
-    RoomChargeBL room = new RoomChargeBL();
+    RoomAssignment room = new RoomAssignment();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

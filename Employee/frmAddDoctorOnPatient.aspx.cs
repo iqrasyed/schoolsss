@@ -9,11 +9,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-public partial class Employee_frmAddDoctorOnPatient : System.Web.UI.Page
+public partial class Employee_frmDoctorOnPatient : System.Web.UI.Page
 {
-    AddPatientBL patient = new AddPatientBL();
-    DoctorMasterBL doctor = new DoctorMasterBL();
-    AddDoctorOnPatient patdoc = new AddDoctorOnPatient();
+    Patient patient = new Patient();
+    Doctor doctor = new Doctor();
+    DoctorOnPatient patdoc = new DoctorOnPatient();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

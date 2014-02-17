@@ -11,8 +11,8 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_frmAddDoctor : System.Web.UI.Page
 {
-    SpecialistMasterBL specialist = new SpecialistMasterBL();
-    DoctorMasterBL doctor = new DoctorMasterBL();
+    Specialist specialist = new Specialist();
+    Doctor doctor = new Doctor();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

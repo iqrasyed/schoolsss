@@ -11,8 +11,8 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_frmCityMaster : System.Web.UI.Page
 {
-    //StateBL state = new StateBL();
-    CityBL city = new CityBL();
+    //State state = new State();
+    City city = new City();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

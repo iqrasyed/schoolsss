@@ -11,9 +11,9 @@ using System.Web.UI.HtmlControls;
 
 public partial class Employee_frmMedicineCharges : System.Web.UI.Page
 {
-    AddPatientBL patient = new AddPatientBL();
-    MedicineMasterBL medicine = new MedicineMasterBL();
-    MedicineChargeBL charge = new MedicineChargeBL();
+    Patient patient = new Patient();
+    Medicine medicine = new Medicine();
+    Pharmacy charge = new Pharmacy();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

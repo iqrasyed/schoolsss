@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Employee_frmAddSpecialDoctorVisitOnpatient : System.Web.UI.Page
 {
-    AddPatientBL patient = new AddPatientBL();
+    Patient patient = new Patient();
     SpecialVisitDoctorBL spdoc = new SpecialVisitDoctorBL();
     AddSpecialDoctorVisitOnPatientBL doctor = new AddSpecialDoctorVisitOnPatientBL();
     protected void Page_Load(object sender, EventArgs e)

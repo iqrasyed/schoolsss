@@ -10,12 +10,12 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using HospitalMgmt.DAL;
 /// <summary>
-/// Summary description for TestMasterBL
+/// Summary description for Test
 /// </summary>
-public class TestMasterBL:Connection
+public class Test:Connection
 {
     public static DataSet ds;
-	public TestMasterBL()
+	public Test()
 	{
 		//
 		// TODO: Add constructor logic here

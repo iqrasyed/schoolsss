@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_Search_frmMedicineonPatient : System.Web.UI.Page
 {
-    MedicineChargeBL medicine = new MedicineChargeBL();
+    Pharmacy medicine = new Pharmacy();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

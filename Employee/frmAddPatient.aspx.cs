@@ -14,13 +14,13 @@ public partial class Employee_frmAddInPatient : System.Web.UI.Page
     //int time, time1, time2;
     //string time3;
     CountryBusinessLayer country = new CountryBusinessLayer();
-    StateBL state = new StateBL();
-    CityBL city = new CityBL();
-    DoctorMasterBL doctor = new DoctorMasterBL();
-    TestMasterBL test = new TestMasterBL();
-    RoomMasterBL room = new RoomMasterBL();
-    AddPatientBL patient = new AddPatientBL();
-    DiseaseMasterBL dis = new DiseaseMasterBL();
+    State state = new State();
+    City city = new City();
+    Doctor doctor = new Doctor();
+    Test test = new Test();
+    Room room = new Room();
+    Patient patient = new Patient();
+    Disease dis = new Disease();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

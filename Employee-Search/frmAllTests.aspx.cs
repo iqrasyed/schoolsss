@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_Search_frmSingleTestS : System.Web.UI.Page
 {
-    TestMasterBL test = new TestMasterBL();
+    Test test = new Test();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

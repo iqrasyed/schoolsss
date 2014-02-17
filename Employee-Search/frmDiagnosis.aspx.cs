@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_Search_frmDiagnosis : System.Web.UI.Page
 {
-    AddPatientBL pat = new AddPatientBL();
+    Patient pat = new Patient();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

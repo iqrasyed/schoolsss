@@ -10,11 +10,11 @@ using System.Web.UI.HtmlControls;
 using HospitalMgmt.DAL;
 using System.Data.SqlClient;
 /// <summary>
-/// Summary description for CityBL
+/// Summary description for City
 /// </summary>
-public class CityBL:Connection
+public class City:Connection
 {
-	public CityBL()
+	public City()
 	{
 		//
 		// TODO: Add constructor logic here

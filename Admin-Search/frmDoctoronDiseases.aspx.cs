@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_Search_frmDoctoronDiseases : System.Web.UI.Page
 {
-    DiseaseMasterBL code = new DiseaseMasterBL();
+    Disease code = new Disease();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

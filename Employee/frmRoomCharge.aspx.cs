@@ -14,9 +14,9 @@ public partial class Employee_frmRoomCharge : System.Web.UI.Page
     int time, time1, time2;
     string time3;
 
-    AddPatientBL pat = new AddPatientBL();
-    RoomMasterBL room = new RoomMasterBL();
-    RoomChargeBL charge = new RoomChargeBL();
+    Patient pat = new Patient();
+    Room room = new Room();
+    RoomAssignment charge = new RoomAssignment();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

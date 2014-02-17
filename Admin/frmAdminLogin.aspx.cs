@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 public partial class Admin_frmAdminLogin : System.Web.UI.Page
 {
-    LoginInfoBL login = new LoginInfoBL();
+    Login login = new Login();
     protected void Page_Load(object sender, EventArgs e)
     {
         txtName.Attributes.Add("class", "input-block-level");

@@ -10,39 +10,34 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using HospitalMgmt.DAL;
 /// <summary>
-/// Summary description for AddDoctorOnPatient
+/// Summary description for RoomAssignment
 /// </summary>
-public class AddDoctorOnPatient:Connection
+public class RoomAssignment:Connection
 {
     public static DataSet ds;
-	public AddDoctorOnPatient()
+	public RoomAssignment()
 	{
 		//
 		// TODO: Add constructor logic here
 		//
 	}
-    string code, doccode, time,specialist;
+   string code,roomcode,time;
     public string Code
     {
         get { return code; }
         set { code = value; }
     }
-    public string Doccode
+    public string Roomcode
     {
-        get { return doccode; }
-        set { doccode = value; }
+        get { return roomcode; }
+        set { roomcode = value; }
     }
     public string Time
     {
         get { return time; }
         set { time = value; }
     }
-    public string Specialist
-    {
-        get { return specialist; }
-        set { specialist = value; }
-    }
-    int charge;
+   int charge;
     public int Charge
     {
         get { return charge; }
@@ -54,12 +49,12 @@ public class AddDoctorOnPatient:Connection
         get { return date; }
         set { date = value; }
     }
-    public void InsertDoctorCharge()
+    public void InsertRoomCharge()
     {
-        SqlParameter[] p = new SqlParameter[6];
+        SqlParameter[] p = new SqlParameter[5];
         p[0] = new SqlParameter("@code", this.code);
         p[0].DbType = DbType.String;
-        p[1] = new SqlParameter("@doccode", this.doccode);
+        p[1] = new SqlParameter("@roomcode", this.roomcode);
         p[1].DbType = DbType.String;
         p[2] = new SqlParameter("@date", this.date);
         p[2].DbType = DbType.DateTime;
@@ -67,33 +62,39 @@ public class AddDoctorOnPatient:Connection
         p[3].DbType = DbType.String;
         p[4] = new SqlParameter("@charge", this.charge);
         p[4].DbType = DbType.Int32;
-        p[5] = new SqlParameter("@specialist", this.specialist);
-        p[5].DbType = DbType.String;
-        SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "SpInsertDoctorCharges", p);
+        SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "SpInsertRoomCharges", p);
 
     }
-    public DataSet ShowDoctorOnPatient()
+    public DataSet ShowPatientRoomCode()
     {
         ds = new DataSet();
-        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowDoctorOnPatient");
+        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowPatientRoomCode");
         return ds;
     }
-    public DataSet ShowPatientInfoByDoctor()
+    public DataSet ShowRoomNameByCode()
     {
-        ds = new DataSet();
         SqlParameter[] p = new SqlParameter[1];
-        p[0] = new SqlParameter("@drcode", this.doccode);
+        p[0] = new SqlParameter("@code", this.roomcode);
         p[0].DbType = DbType.String;
-        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowPatientInfoByDoctor",p);
+        ds = new DataSet();
+        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowRoomNameByCode",p);
         return ds;
     }
-    public DataSet ShowDoctorNameByCode()
+    public DataSet ShowPatientInfoByRoomCode()
     {
-        ds = new DataSet();
         SqlParameter[] p = new SqlParameter[1];
-        p[0] = new SqlParameter("@drcode", this.doccode);
+        p[0] = new SqlParameter("@code", this.roomcode);
         p[0].DbType = DbType.String;
-        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowDoctorNameByCode", p);
+        ds = new DataSet();
+        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowPatientInfoByRoomCode", p);
         return ds;
+    }
+     public void UpdateRoomMaster()
+    {
+        SqlParameter[] p = new SqlParameter[1];
+        p[0] = new SqlParameter("@code", this.code);
+        p[0].DbType = DbType.String;
+        SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "SpUpdateRoomMaster", p);
+
     }
 }

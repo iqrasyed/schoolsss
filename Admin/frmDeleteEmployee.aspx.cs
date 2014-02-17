@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 public partial class Admin_frmDeleteEmployee : System.Web.UI.Page
 {
-    EmployeeDetailBL emp = new EmployeeDetailBL();
+    Employee emp = new Employee();
 
     protected void btnDelete_Click(object sender, EventArgs e)
     {

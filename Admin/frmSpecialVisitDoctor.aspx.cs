@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_frmSpecialVisitDoctor : System.Web.UI.Page
 {
-    SpecialistMasterBL specialist = new SpecialistMasterBL();
+    Specialist specialist = new Specialist();
     SpecialVisitDoctorBL spdoc = new SpecialVisitDoctorBL();
     protected void Page_Load(object sender, EventArgs e)
     {

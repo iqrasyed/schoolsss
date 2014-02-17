@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 using HospitalMgmt.DAL;
 
 /// <summary>
-/// Summary description for PrescriptionMaster
+/// Summary description for Prescription
 /// </summary>
-public class PrescriptionMaster : Connection
+public class Prescription : Connection
 {
     string code, prescription;
     public string Code
@@ -26,7 +26,7 @@ public class PrescriptionMaster : Connection
         get { return prescription; }
         set { prescription = value; }
     }
-	public PrescriptionMaster()
+	public Prescription()
 	{
 		//
 		// TODO: Add constructor logic here

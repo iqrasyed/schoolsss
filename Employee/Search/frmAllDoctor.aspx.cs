@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_Search_frmAllDoctor : System.Web.UI.Page
 {
-    DoctorMasterBL doctor = new DoctorMasterBL();
+    Doctor doctor = new Doctor();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

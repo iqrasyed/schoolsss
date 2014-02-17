@@ -10,7 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using HospitalMgmt.DAL;
 /// <summary>
-/// Summary description for EmployeeDetailBL
+/// Summary description for Employee
 /// </summary>
 public class Accountant : Connection
 {

@@ -11,9 +11,9 @@ using System.Web.UI.HtmlControls;
 
 public partial class Doctors_frmOwnDetails : System.Web.UI.Page
 {
-    LoginInfoBL login = new LoginInfoBL();
-    SpecialistMasterBL spec = new SpecialistMasterBL();
-    DoctorMasterBL doc = new DoctorMasterBL();
+    Login login = new Login();
+    Specialist spec = new Specialist();
+    Doctor doc = new Doctor();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

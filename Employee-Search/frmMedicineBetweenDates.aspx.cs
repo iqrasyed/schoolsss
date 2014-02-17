@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_Search_frmMedicineBetweenDates : System.Web.UI.Page
 {
-    MedicineMasterBL meidicine = new MedicineMasterBL();
+    Medicine meidicine = new Medicine();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

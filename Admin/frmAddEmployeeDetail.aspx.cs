@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_frmAddEmployeeDetail : System.Web.UI.Page
 {
-    EmployeeDetailBL emp = new EmployeeDetailBL();
+    Employee emp = new Employee();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)

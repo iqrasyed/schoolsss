@@ -10,12 +10,12 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using HospitalMgmt.DAL;
 /// <summary>
-/// Summary description for SpecialistMasterBL
+/// Summary description for Specialist
 /// </summary>
-public class SpecialistMasterBL:Connection
+public class Specialist:Connection
 {
     public static DataSet ds;
-	public SpecialistMasterBL()
+	public Specialist()
 	{
 		//
 		// TODO: Add constructor logic here

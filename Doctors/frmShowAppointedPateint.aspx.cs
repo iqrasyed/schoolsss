@@ -12,7 +12,7 @@ using System.Web.UI.HtmlControls;
 public partial class Doctors_frmShowAppointedPateint : System.Web.UI.Page
 {
    
-    LoginInfoBL login = new LoginInfoBL();
+    Login login = new Login();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["Name"] == null)
