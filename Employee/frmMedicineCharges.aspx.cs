@@ -64,8 +64,7 @@ public partial class Employee_frmMedicineCharges : System.Web.UI.Page
             txtCharge.Text = totcharge.ToString();
             charge.Charge = int.Parse(txtCharge.Text.Trim());
             charge.InsertMedicineCharge();
-            lblMsg.Text = "Inserted...!";
-            
+            lblMsg.Text = "Inserted...!";           
         }
         catch (Exception ex)
         {
