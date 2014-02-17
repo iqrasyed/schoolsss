@@ -15,8 +15,7 @@ using HospitalMgmt.DAL;
 /// </summary>
 public class Payroll:Connection
 {
-    string emp_id, status;
-    DateTime date;
+    string emp_id, status,date;
 	public Payroll()
 	{
 		//
@@ -34,19 +33,17 @@ public class Payroll:Connection
         get { return status; }
         set { status = value; }
     }
-    public DateTime Date
+    public string Date
     {
         get { return date; }
         set { date = value; }
     }
-    public DataSet CalculateAllSalaries()
+    public void CalculateAllSalaries()
     {
-        //SqlParameter[] p = new SqlParameter[1];
-        //p[0] = new SqlParameter("@id", this.id);
-        //p[0].DbType = DbType.Int16;
-      DataSet ds = new DataSet();
-        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowAllDoctor");
-        return ds;
+        SqlParameter[] p = new SqlParameter[1];
+        p[0] = new SqlParameter("@month", this.Date);
+        p[0].DbType = DbType.String;                
+        SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "SpCalculatePayInfo", p);
     }
     public DataSet ViewAllSalaries()
     {
@@ -54,7 +51,8 @@ public class Payroll:Connection
         //p[0] = new SqlParameter("@id", this.id);
         //p[0].DbType = DbType.Int16;
         DataSet ds = new DataSet();
-        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowAllDoctor");
+        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowAllPay");
+
         return ds;
     }
     public DataSet SendAllSalaries()
@@ -63,8 +61,24 @@ public class Payroll:Connection
         //p[0] = new SqlParameter("@id", this.id);
         //p[0].DbType = DbType.Int16;
         DataSet ds = new DataSet();
-        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowAllDoctor");
+        SqlHelper.ExecuteScalar(con, CommandType.StoredProcedure, "SpUpdatePayInfo");
         return ds;
     }
 
+    public bool CheckInfo()
+    {
+        SqlParameter[] p = new SqlParameter[1];
+        p[0] = new SqlParameter("@month", this.Date);
+        p[0].DbType = DbType.String;       
+        int count;
+        count = int.Parse(SqlHelper.ExecuteScalar(con, CommandType.StoredProcedure, "SpCheckPayInfo", p).ToString());
+        if (count > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }  
 }
