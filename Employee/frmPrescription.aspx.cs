@@ -55,7 +55,7 @@ public partial class Employee_frmPrescription : System.Web.UI.Page
         try
         {          
             prescription.Code = ddlCode.SelectedItem.Text.Trim();
-            prescription.Prescription = txtPres.Text.Trim();
+            prescription.Prescription_Detail = txtPres.Text.Trim();
             prescription.AddPatientPrescription();             
             lblMsg.Text = "Inserted...!";
         }
