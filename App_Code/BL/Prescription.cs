@@ -13,32 +13,33 @@ using HospitalMgmt.DAL;
 /// <summary>
 /// Summary description for Prescription
 /// </summary>
-public class Prescription : Connection
+public class Prescription : Connection             
 {
-    string code, prescription;
+    string code, prescription_detail;
+    public Prescription()
+    {
+        //
+        // TODO: Add constructor logic here
+        //
+    }
     public string Code
     {
         get { return code; }
         set { code = value; }
     }
-    public string Prescription
+    public string Prescription_Detail
     {
-        get { return prescription; }
-        set { prescription = value; }
+        get { return prescription_detail; }
+        set { prescription_detail = value; }
     }
-	public Prescription()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+	
 
     public void AddPatientPrescription()
     {
         SqlParameter[] p = new SqlParameter[2];
         p[0] = new SqlParameter("@code", this.code);
         p[0].DbType = DbType.String;
-        p[1] = new SqlParameter("@prescription", this.prescription);
+        p[1] = new SqlParameter("@prescription", this.prescription_detail);
         p[1].DbType = DbType.String;
         SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "SpAddPatientPrescription", p);
     }
