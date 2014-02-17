@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 
 public partial class Admin_Search_frmMedicineonDate : System.Web.UI.Page
 {
-    Medicine medicine = new Medicine();
+    MedicineAssignment medicine = new MedicineAssignment();
     Patient patient = new Patient();
     protected void Page_Load(object sender, EventArgs e)
     {
