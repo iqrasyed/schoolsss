@@ -7,11 +7,13 @@
 
     <li class="accordion-group ">
         <a data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed" data-target="#patient-nav">
-            <i class="icon-pencil icon-large"></i> Add Resources<span class="label label-inverse pull-right">2</span>
+            <i class="icon-pencil icon-large"></i> Add Resources<span class="label label-inverse pull-right">3</span>
         </a>
         <ul class="collapse " id="patient-nav">
+            <li><a id="A17" runat="server" href="~/Admin/frmAddDoctor.aspx"><i class="icon-angle-right"></i> Doctor</a></li>            
             <li><a runat="server" href="~/Admin/frmAddEmployeeDetail.aspx"><i class="icon-angle-right"></i> Staff</a></li>
-            <li><a runat="server" href="~/Admin/frmAddDoctor.aspx"><i class="icon-angle-right"></i> Doctor</a></li>            
+            <li><a id="A18" runat="server" href="~/Admin/frmAddAccountant.aspx"><i class="icon-angle-right"></i> Accountant</a></li>            
+            
         </ul>
        
     </li>

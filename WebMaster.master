@@ -41,7 +41,9 @@
                                     <li><a href="~/Employee/frmLogin.aspx" runat="server">Employee LogIn</a></li>
                                     <li><a href="~/Doctors/frmLogin.aspx" runat="server">Doctor LogIn</a></li>
                                     <li><a href="~/Admin/frmAdminLogin.aspx" runat="server">Admin LogIn</a></li>
+                                    <li><a href="~/Accountant/frmLogin.aspx" runat="server">Accountant LogIn</a></li>
                                     <li><a  href="frmPaitentHistoryN.aspx" runat="server">Paitent</a></li>
+
                                 </ul>
                             </li>
                         </ul>
