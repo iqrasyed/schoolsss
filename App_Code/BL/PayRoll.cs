@@ -9,102 +9,62 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using HospitalMgmt.DAL;
-/// <summary>
-/// Summary description for EmployeeDetailBL
-/// </summary>
-public class PayRoll : Connection
-{
-    public static DataSet ds;
-    public PayRoll()
-    {
-        //
-        // TODO: Add constructor logic here
-        //
-    }
-    string name, address, phone, email, dutytime, uname, password, salary;
-    public string Name
-    {
-        get { return name; }
-        set { name = value; }
-    }
-    public string Salary
-    {
-        get { return salary; }
-        set { salary = value; }
-    }
-    public string Address
-    {
-        get { return address; }
-        set { address = value; }
-    }
-    public string Phone
-    {
-        get { return phone; }
-        set { phone = value; }
-    }
-    public string Email
-    {
-        get { return email; }
-        set { email = value; }
-    }
-    public string Dutytime
-    {
-        get { return dutytime; }
-        set { dutytime = value; }
-    }
-    public string Uname
-    {
-        get { return uname; }
-        set { uname = value; }
-    }
-    public string Password
-    {
-        get { return password; }
-        set { password = value; }
-    }
-    int roleid;
-    int empid;
-    public int Roleid
-    {
-        get { return roleid; }
-        set { roleid = value; }
-    }
-    public int Empid
-    {
-        get { return empid; }
-        set { empid = value; }
-    }
-    public void InsertEmployeeDetail()
-    {
 
-        SqlParameter[] p = new SqlParameter[10];
-        p[0] = new SqlParameter("@name", this.name);
-        p[0].DbType = DbType.String;
-        p[1] = new SqlParameter("@address", this.address);
-        p[1].DbType = DbType.String;
-        p[2] = new SqlParameter("@phone", this.phone);
-        p[2].DbType = DbType.String;
-        p[3] = new SqlParameter("@email", this.email);
-        p[3].DbType = DbType.String;
-        p[4] = new SqlParameter("@dutytime", this.dutytime);
-        p[4].DbType = DbType.String;
-        p[5] = new SqlParameter("@uname", this.uname);
-        p[5].DbType = DbType.String;
-        p[6] = new SqlParameter("@password", this.password);
-        p[6].DbType = DbType.String;
-        p[7] = new SqlParameter("@roleid", this.roleid);
-        p[7].DbType = DbType.Int16;
-        p[8] = new SqlParameter("@EmpId", this.empid);
-        p[8].DbType = DbType.Int32;
-        p[9] = new SqlParameter("@salary", this.salary);
-        p[9].DbType = DbType.String;
-        SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "spRegisterEmployee", p);
-    }
-    public void DeleteEmployeeDetail()
+/// <summary>
+/// Summary description for Payroll
+/// </summary>
+public class Payroll:Connection
+{
+    string emp_id, status;
+    DateTime date;
+	public Payroll()
+	{
+		//
+		// TODO: Add constructor logic here
+		//
+	}
+    public string Emp_id
     {
-        SqlParameter[] p = new SqlParameter[1];
-        p[0] = new SqlParameter("@EmpId", this.empid);
-        p[0].DbType = DbType.Int16;
-        SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "SpDeleteEmployee", p);
+        get { return emp_id; }
+        set { emp_id = value; }
     }
+
+    public string Status
+    {
+        get { return status; }
+        set { status = value; }
+    }
+    public DateTime Date
+    {
+        get { return date; }
+        set { date = value; }
+    }
+    public DataSet CalculateAllSalaries()
+    {
+        //SqlParameter[] p = new SqlParameter[1];
+        //p[0] = new SqlParameter("@id", this.id);
+        //p[0].DbType = DbType.Int16;
+      DataSet ds = new DataSet();
+        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowAllDoctor");
+        return ds;
+    }
+    public DataSet ViewAllSalaries()
+    {
+        //SqlParameter[] p = new SqlParameter[1];
+        //p[0] = new SqlParameter("@id", this.id);
+        //p[0].DbType = DbType.Int16;
+        DataSet ds = new DataSet();
+        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowAllDoctor");
+        return ds;
+    }
+    public DataSet SendAllSalaries()
+    {
+        //SqlParameter[] p = new SqlParameter[1];
+        //p[0] = new SqlParameter("@id", this.id);
+        //p[0].DbType = DbType.Int16;
+        DataSet ds = new DataSet();
+        ds = SqlHelper.ExecuteDataset(con, CommandType.StoredProcedure, "SpShowAllDoctor");
+        return ds;
+    }
+
 }

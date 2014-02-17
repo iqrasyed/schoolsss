@@ -92,6 +92,24 @@ public class LoginInfoBL:Connection
             return false;
         }
     }
+    public bool CheckAccountantInfo()
+    {
+        SqlParameter[] p = new SqlParameter[2];
+        p[0] = new SqlParameter("@name", this.name);
+        p[0].DbType = DbType.String;
+        p[1] = new SqlParameter("@password", this.password);
+        p[1].DbType = DbType.String;
+        int count;
+        count = int.Parse(SqlHelper.ExecuteScalar(con, CommandType.StoredProcedure, "SpCheckAccountantInfo", p).ToString());
+        if (count > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     public DataSet ShowPatientByDoctor()
     {
         SqlParameter[] p = new SqlParameter[3];
@@ -128,6 +146,16 @@ public class LoginInfoBL:Connection
        SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "SpChangeDoctorPassword", p);
 
    }
+    public void ChangeAccountantPassword()
+    {
+        SqlParameter[] p = new SqlParameter[2];
+        p[0] = new SqlParameter("@uname", this.name);
+        p[0].DbType = DbType.String;
+        p[1] = new SqlParameter("@password", this.password);
+        p[1].DbType = DbType.String;
+        SqlHelper.ExecuteNonQuery(con, CommandType.StoredProcedure, "SpChangeAccountantPassword", p);
+
+    }
     public void ChangeEmployeePassword()
    {
        SqlParameter[] p = new SqlParameter[2];
